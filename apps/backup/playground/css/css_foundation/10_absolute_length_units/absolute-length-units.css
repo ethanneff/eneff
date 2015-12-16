@@ -1,0 +1,33 @@
+/* Absolute Length Units
+--------------------------------------------- */
+
+
+/* for print pages */
+.cm {
+	width:21.15cm;
+}
+
+.mm {
+	width:211.6mm;
+}
+
+.in {
+	width:8.33in;
+}
+
+.pc {
+	width: 50pc;
+	font-size: 2.4pc;
+}
+
+.pt {
+	width: 600pt;
+	font-size: 28.4pt;
+}
+
+
+/* for web design */
+.px {
+	width: 800px;
+	font-size: 38px;
+}

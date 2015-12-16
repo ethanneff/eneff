@@ -1,0 +1,79 @@
+
+/* Page Styles
+--------------------------------------------- */
+
+body {
+	font-size: 1.2em;
+	font-family: 'Open Sans', sans-serif;
+	width: 80%;
+	margin: 0 auto;
+}
+
+div {
+	height: 25em;
+	margin-top: 2em;
+	position: relative;
+}
+
+div:after {
+	content: "I'm behind the div!";
+	font-size: 2em;
+	position: absolute;
+	top: 42%;
+	left: 25%;
+	z-index: -1;
+}
+
+
+/* Color Values
+--------------------------------------------- */
+
+div {
+	background-color: red; /* 16 colors */
+	background-color: tomato;
+	background-color: #ff0033;
+	background-color: rgba(65,104,255,.9);
+	background-color: hsla(240,70%,50%,.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

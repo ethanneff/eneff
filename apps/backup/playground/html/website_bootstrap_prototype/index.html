@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ribbit - A Treehouse Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+    <link href="css/my-styles.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand text-muted" href="#">Ribbit</a>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About Ribbit</a></li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" data-target="#">Treehouse<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">About Treehouse</a></li>
+                <li><a href="#">Video Library</a></li>
+                <li><a href="#">Learning Adventures</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Plans &amp; Pricing</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End navbar -->
+
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide jumbotron">
+      <div class="container">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <h1>Self-destructing message app</h1>
+            <p class="lead">Learn how to build this fun little app by signing up for a Treehouse account today.</p>
+            <p class="btn-group">
+              <a class="btn btn-success btn-lg" href="#">Download the app</a>
+              <a class="btn btn-default btn-lg hidden-xs" data-toggle="modal" href="#textModal">Text me the link</a>
+            </p>
+          </div>
+          <div class="item">
+            <h1>Learn how to build it for iOS</h1>
+            <p class="lead">We'll teach you how to build it from scratch!</p>
+            <p><a class="btn btn-success btn-lg" href="#">Get started today!</a>
+          </div>
+          <div class="item">
+            <h1>Learn how to build it for Android</h1>
+            <p class="lead">We'll teach you how to build it from scratch!</p>
+            <p><a class="btn btn-success btn-lg" href="#">Get started today!</a></p>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+      </a>
+    </div> <!-- End Carousel -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="textModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">We'll Text You the Link!</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-inline">
+              <div class="form-group">
+                <label class="sr-only" for="mobilePhone">Mobile Phone</label>
+                <input type="tel" class="form-control" id="mobilePhone" placeholder="Mobile Phone">
+              </div>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>iOS</option>
+                  <option>Android</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary" data-dismiss="modal">Send me link</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- Main content-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <b class="glyphicon glyphicon-camera"></b>
+          <h2>Delete photo &amp; video based on a timer</h2>
+          <p>Learn how to write the code that downloads and displays messages, photos, and videos that timeout after a few seconds. Then create the code that deletes them from the back-end to make them "self destruct."</p>
+        </div>
+        <div class="col-sm-4">
+          <b class="glyphicon glyphicon-user"></b>
+          <h2>Build an easily managed friends list</h2>
+          <p>Learn what Parse.com offers as a "backend-as-a-service" platform. Explore the user account management APIs provided by Parse.com and write the code to create and save a new user in a Parse.com data store.</p>
+       </div>
+        <div class="col-sm-4">
+          <b class="glyphicon glyphicon-cloud"></b>
+          <h2>Store &amp; retrieve data using cloud servers</h2>
+          <p>We'll teach you how to upload images, video files, and messages to Parse.com's cloud servers. Then learn how to retrieve the data by setting up custom queries that download and display them in the app.</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-6 hidden-xs">
+          <h3>Learn how to make this app</h3>
+          <p>We will build on the concepts learned in previous iOS projects to create an app that will allow users to send photo or video messages to other users that will be deleted once viewed.</p>
+          <div class="row">
+            <div class="col-sm-6">
+              <img class="img-responsive hidden-xs" src="img/thumb.jpg">
+            </div>
+            <div class="col-sm-6">
+              <p>Get access to these courses for only $24 a month!</p>
+              <p><a href="#">Visit Treehouse Now &raquo;</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <h3>About Treehouse</h3>
+          <p>Treehouse provides an extensive library of step-by-step video courses and training exercises that will give you a wide range of in-demand technology skills that will help you land your next dream job.</p>
+          <a href="#" class="btn btn-success btn-md">Sign up for Treehouse &raquo;</a>
+        </div>
+      </div><!-- End main content-->
+
+      <hr>
+      <div class="pull-right">
+        <p>&copy; 2013 Ribbit - By Treehouse Island, Inc.</p>
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

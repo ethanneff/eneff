@@ -1,0 +1,22 @@
+body {
+	padding-top: 50px;
+	text-align: center;
+}
+
+/* Shapes */
+
+.base {
+  display: inline-block;
+  margin: 0 15px;
+  width: 200px;
+  height: 200px;
+  background-color: lightcoral;
+}
+
+.radius {
+  border-radius: 50%;
+}
+
+.ellipse {
+  height: 120px;
+}

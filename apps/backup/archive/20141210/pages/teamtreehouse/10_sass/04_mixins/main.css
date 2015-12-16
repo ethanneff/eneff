@@ -1,0 +1,16 @@
+.box {
+  border-radius: 4px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px; }
+  .box a {
+    color: green; }
+    .box a:hover {
+      color: blue; }
+  .box h1 {
+    color: red; }
+
+.button {
+  border-radius: 4px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background: #345; }

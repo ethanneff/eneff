@@ -1,0 +1,28 @@
+body {
+	padding: 1% 25%;
+	font-family: sans-serif;
+}
+ul {
+	margin: 25px auto 0;
+	padding: 12px;
+	border: 2px dotted grey;
+	list-style-position: inside;
+	font-size: 1.5em;
+}
+li {
+	margin: 0;
+	padding: 15px;
+	border-bottom: 2px solid #224a6b;
+}
+
+/* Structural Pseudo-classes */
+
+li:last-child {
+	background-color: steelblue;
+	color: white;
+	border-bottom: none;
+}
+
+:only-child {
+	color: orange;
+}

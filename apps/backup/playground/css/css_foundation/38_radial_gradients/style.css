@@ -1,0 +1,16 @@
+
+/* ------------------------
+	Radial Gradients
+--------------------------- */
+
+.box {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	margin: 35px auto;
+
+	background: -webkit-radial-gradient(65% 15%, circle, aqua, darkblue);
+	background: -moz-radial-gradient(65% 15%, circle, aqua, darkblue);
+	background: -o-radial-gradient(65% 15%, circle, aqua, darkblue);
+	background: -ms-radial-gradient(65% 15%, circle, aqua, darkblue);
+}

@@ -1,0 +1,23 @@
+/* handle the input fields with hidden angular directives */
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+
+
+/* handle the gallery images */
+.img-wrap {
+	width: 33.3333%;
+}
+
+.thumbnail-image {
+	width:33.3333%;
+}
+
+
+.container {
+	max-width: 35em;
+}

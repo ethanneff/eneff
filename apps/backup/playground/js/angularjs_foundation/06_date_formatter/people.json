@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Alex",
+    "profession": "Programmer",
+    "hometown": "St Louis, MO",
+    "email": "alex@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "David",
+    "profession": "Salesman",
+    "hometown": "Denver, CO"
+  },
+  {
+    "id": 3,
+    "name": "Laura",
+    "profession": "CEO",
+    "hometown": "San Francisco, CA",
+    "email": "laura.stevenson@gmail.com"
+  }
+]

@@ -1,0 +1,35 @@
+
+/* Example 1 - index.html */
+
+div {
+	margin: 50px auto;
+	font: 1.1em/1.5 sans-serif;
+	box-sizing: border-box;
+}
+
+.sketch-img {
+	width: 700px;
+	height: 500px;
+	border-radius: 10px;
+	background: url('img/smiley.png') no-repeat 350px 200px, url('img/pencil.png') no-repeat 50px 50px, url('img/texture.jpg') #d6bb80;
+	background-size: 250px 200px, 50% 45%, 110%;
+}
+
+/* Example 2 - full-page-bg.html */
+
+/*html {
+  height: 100%;  
+  background: url('img/full-bg.jpg') no-repeat center;
+  background-size: cover;
+}*/
+
+.box {
+	width: 80%;
+	height: 500px;
+	padding: 30px;
+  	background: url('img/full-bg.jpg') no-repeat center;
+	background-size: cover; 
+	background-clip: padding-box;
+/*	background-origin: content-box;*/
+	border: 15px solid rgba(35,66,97,.6);
+}

@@ -1,0 +1,18 @@
+
+/* ------------------------
+	Transparent Gradients
+--------------------------- */
+
+html {
+	height: 100%
+}
+
+body {
+	background: -webkit-linear-gradient(hsl(195,51%,44%), rgba(255,255,255,0) 75%), url('bg.jpg');
+	background: -moz-linear-gradient(hsl(195,51%,44%), rgba(255,255,255,0) 75%), url('bg.jpg');
+	background: -ms-linear-gradient(hsl(195,51%,44%), rgba(255,255,255,0) 75%), url('bg.jpg');
+	background: -o-linear-gradient(hsl(195,51%,44%), rgba(255,255,255,0) 75%), url('bg.jpg');
+	background-size: cover;
+}
+
+

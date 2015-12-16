@@ -1,0 +1,8 @@
+# robots.txt for eneff.com
+
+User-agent: *
+Disallow: /archive
+
+#Begin Attracta SEO Tools Sitemap. Do not remove
+sitemap: http://cdn.attracta.com/sitemap/3953503.xml.gz
+#End Attracta SEO Tools Sitemap. Do not remove

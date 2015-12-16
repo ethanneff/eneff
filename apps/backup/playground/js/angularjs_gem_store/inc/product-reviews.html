@@ -1,0 +1,47 @@
+<!--  Product Reviews List -->
+<ul class="list-unstyled">
+  <h4>Reviews</h4>
+  <!-- parse through each review of the product -->
+  <li ng-repeat="review in product.reviews">
+    <blockquote>
+      <strong>{{review.stars}} Stars</strong>
+      {{review.body}}
+      <!-- add the 'date' filter on the review.createdOn -->
+      <cite class="clearfix">—{{review.author}} on {{review.createdOn | date}}</cite>
+    </blockquote>
+  </li>
+</ul>
+<!-- Review Form -->
+<!-- review controller for each review-->
+<!-- turn off the default html validation (will use angular validation instead) -->
+<!-- only submit with angular's ng-submit if the form is valid -->
+<!-- angular's ng-submit will run the addReview() function of the controller -->
+<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+  <!--  Live Preview -->
+  <blockquote >
+    <strong>{{reviewCtrl.review.stars}} Stars</strong>
+    {{reviewCtrl.review.body}}
+    <cite class="clearfix">—{{reviewCtrl.review.author}}</cite>
+  </blockquote>
+
+  <!--  Review Form -->
+  <h4>Submit a Review</h4>
+  <fieldset class="form-group">
+    <!-- required field -->
+    <!-- ng-model creates the property review.stars under the controller -->
+    <select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" required >
+      <!-- value is set by the ng-options directive -->
+      <option value="">Rate the Product</option>
+    </select>
+  </fieldset>
+  <fieldset class="form-group">
+    <!-- ng-model to connect the field to the controller's property -->
+    <textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
+  </fieldset>
+  <fieldset class="form-group">
+    <input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" required />
+  </fieldset>
+  <fieldset class="form-group">
+    <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+  </fieldset>
+</form>

@@ -1,0 +1,63 @@
+body {
+	padding-top: 70px;
+	background: rgba(240,252,255,.8);
+}
+.wrap {
+	margin: 0 auto;
+	padding: 110px 0;
+	width: 85%;
+	background: #F0FCFF;
+	box-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+.box {
+	margin: auto;
+	width: 150px;
+	background: url('mike-transparent.png') no-repeat 0 0;
+	background-size: 150px;
+}
+.mike {
+	display: block;
+	width: 100%;
+	transition: 1s ease-in-out;
+}
+
+.wrap:hover .mike {
+	-webkit-transform: rotate(2turn);
+	-webkit-transform-origin: 100% 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

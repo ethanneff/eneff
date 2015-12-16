@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Ethan Neff</title>
+	<meta name="description" content="Ethan Neff's CS329E Homepage">
+	<meta name="author" content="Ethan Neff">
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/docs.css">
+
+	<!-- Favicon
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+
+			<div class="container">
+				<div class="three columns sidebar">
+					<nav>
+						<h3 id="logo">Ethan Neff</h3>
+						<ul>
+							<li><a href="#problem1">Problem 1</a></li>
+							<li><a href="#problem2">Problem 2</a></li>
+							<li><a href="#problem3">Problem 3</a></li>
+							<li><a href="#problem4">Problem 4</a></li>
+							<li><a href="index.html">Back to Main Page</a></li>
+						</ul>
+						<div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/13109/azcarbon_2_1_0_VERT"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+					</nav>
+					&nbsp;
+				</div>
+				<div class="twelve columns offset-by-one content">
+					<header>
+						<h1>CS329E: Elements of Navigating Cyberspace</h1>
+						<h2>Assignment 6</h2>
+					</header>
+					<hr class="large" />
+					
+					<div class="doc-section" id="problem1">
+						<h3>Problem 1 - Run PING</h3><br />
+
+						<ul><strong>www.cnn.com</strong>
+							<li>Pinging cnn-56m.gslb.vgtf.net [157.166.248.11] with 32 bytes of data:</li>
+							<li>Request timed out.</li>
+							<li>Request timed out.</li>
+							<li>Request timed out.</li>
+							<li>Request timed out.</li>
+							<li>Ping statistics for 157.166.248.11: Packets: Sent = 4, Received = 0, Lost = 4 (100% loss)</li>
+						</ul>
+						<ul><strong>www.amazon.com</strong>
+							<li>Pinging www.amazon.com [72.21.194.212] with 32 bytes of data:</li>
+							<li>Request timed out.</li>
+							<li>Request timed out.</li>
+							<li>Request timed out.</li>
+							<li>Request timed out.</li>
+							<li>Ping statistics for 72.21.194.212: Packets: Sent = 4, Received = 0, Lost = 4 (100% loss)</li>
+						</ul>
+						<ul><strong>www.utexas.edu</strong>
+							<li>Pinging www.utexas.edu [128.83.40.147] with 32 bytes of data:</li>
+							<li>Reply from 128.83.40.147: bytes=32 time=13ms TTL=247</li>
+							<li>Reply from 128.83.40.147: bytes=32 time=6ms TTL=247</li>
+							<li>Reply from 128.83.40.147: bytes=32 time=5ms TTL=247</li>
+							<li>Reply from 128.83.40.147: bytes=32 time=82ms TTL=247</li>
+							<li>Ping statistics for 128.83.40.147: Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)</li>
+							<li>Approximate round trip times in milli-seconds: Minimum = 5ms, Maximum = 82ms, Average = 26ms</li>
+						</ul>
+						<ul><strong>www.txstate.edu</strong>
+							<li>Pinging web-cache.its.txstate.edu [147.26.201.246] with 32 bytes of data:</li>
+							<li>Request timed out.</li>
+							<li>Request timed out.</li>
+							<li>Request timed out.</li>
+							<li>Request timed out.</li>
+							<li>Ping statistics for 147.26.201.246: Packets: Sent = 4, Received = 0, Lost = 4 (100% loss)</li>
+						</ul>
+						<p><strong>Explanation: </strong>CNN, Amazon, and TXState all received timed out results because these sites want to prevent DoS attacks so they have disable ICMP on their servers or have setup other network settings that prevent a ping request be received or responded to. UTexas was able to be pinged, and the packet times were different because the packets took different router routes in the online network.</p>
+					</div>
+					<hr />
+					
+					<div class="doc-section" id="problem2">
+						<h3>Problem 2 - Run DIG or NSLOOKUP</h3><br />
+
+						<ul><strong>www.cnn.com</strong>
+							<li>Server:  Ermahgerd-Hersp</li>
+							<li>Address:  192.168.1.1</li>
+							<li></li>
+							<li>Non-authoritative answer:</li>
+							<li>Name:    cnn-lax-tmp.gslb.vgtf.net</li>
+							<li>          157.166.241.10</li>
+							<li>          157.166.241.11</li>
+							<li>          157.166.240.11</li>
+							<li>Aliases:  www.cnn.com</li>
+							<li>          www.cnn.com.vgtf.net</li>
+						</ul>
+						<ul><strong>www.amazon.com</strong>
+							<li>Server:  Ermahgerd-Hersp</li>
+							<li>Address:  192.168.1.1</li>
+							<li></li>
+							<li>Non-authoritative answer:</li>
+							<li>Name:    www.amazon.com</li>
+							<li>Address:  176.32.98.166</li>
+						</ul>
+						<ul><strong>www.utexas.edu</strong>
+							<li>Server:  Ermahgerd-Hersp</li>
+							<li>Address:  192.168.1.1</li>
+							<li></li>
+							<li>Non-authoritative answer:</li>
+							<li>Name:    www.utexas.edu</li>
+							<li>Addresses:  128.83.40.144</li>
+							<li>          128.83.40.145</li>
+							<li>          128.83.40.146</li>
+							<li>          128.83.40.147</li>
+						</ul>
+						<ul><strong>www.txstate.edu</strong>
+							<li>Server:  Ermahgerd-Hersp</li>
+							<li>Address:  192.168.1.1</li>
+							<li></li>
+							<li>Non-authoritative answer:</li>
+							<li>Name:    web-cache.its.txstate.edu</li>
+							<li>Address:  147.26.201.246</li>
+							<li>Aliases:  www.txstate.edu</li>
+						</ul>
+					</div>
+					<hr />
+					
+					<div class="doc-section" id="problem3">
+						<h3>Problem 3 - Run IP INFO, TRACEPATH or TRACEROUTE</h3><br />
+
+						<ul><strong>IP Information: 203.197.74.160</strong>
+							<li>City:    Mumbai</li>
+							<li>Country: India</li>
+						</ul>
+						<ul><strong>Traceroute: 203.197.74.160</strong>
+							<li>  1     3 ms     1 ms     1 ms  Ermahgerd-Hersp [192.168.1.1]</li>
+							<li>  2    51 ms     1 ms     1 ms  172.17.104.1</li>
+							<li>  3    30 ms     1 ms     1 ms  rrcs-71-42-119-1.sw.biz.rr.com [71.42.119.1]</li>
+							<li>  4    17 ms    12 ms     8 ms  rrcs-97-77-2-8.sw.biz.rr.com [97.77.2.8]</li>
+							<li>  5    15 ms    22 ms    15 ms  tge0-8-0-9.austtxrdcsc-cr02.texas.rr.com [24.27.
+13.216]</li>
+							<li>  6    16 ms    69 ms    13 ms  agg22.hstntxl3-cr01.texas.rr.com [24.175.41.48]</li>
+							<li>  7    13 ms    13 ms    13 ms  ae-4-0.cr0.hou30.tbone.rr.com [66.109.6.54]</li>
+							<li>  8    20 ms    14 ms    14 ms  ae-0-0.cr0.dfw10.tbone.rr.com [66.109.6.39]</li>
+							<li>  9    92 ms   131 ms    70 ms  107.14.17.232</li>
+							<li> 10    13 ms    10 ms    10 ms  ix-23-0.tcore2.DT8-Dallas.as6453.net [66.110.57.
+97]</li>
+							<li> 11   168 ms   166 ms   168 ms  if-8-2.tcore1.LVW-LosAngeles.as6453.net [66.110.
+57.82]</li>
+							<li> 12   187 ms   167 ms   166 ms  if-4-2.tcore1.PDI-PaloAlto.as6453.net [66.198.12
+7.9]</li>
+							<li> 13   173 ms   166 ms   166 ms  if-2-2.tcore2.PDI-PaloAlto.as6453.net [66.198.12
+7.2]</li>
+							<li> 14   223 ms   507 ms   183 ms  if-9-2.tcore1.TV2-Tokyo.as6453.net [180.87.180.1
+8]</li>
+							<li> 15   170 ms   174 ms   167 ms  if-2-2.tcore2.TV2-Tokyo.as6453.net [180.87.180.2
+]</li>
+							<li> 16   298 ms   284 ms   404 ms  if-6-2.tcore1.SVW-Singapore.as6453.net [180.87.1
+2.109]</li>
+							<li> 17   268 ms   445 ms   266 ms  if-5-2.tcore1.CXR-Chennai.as6453.net [180.87.12.
+54]</li>
+							<li> 18   618 ms     *      533 ms  180.87.36.10</li>
+							<li> 19   444 ms   295 ms   519 ms  59.163.25.77.static.vsnl.net.in [59.163.25.77]</li>
+							<li> 20   533 ms   283 ms   427 ms  59.163.25.77.static.vsnl.net.in [59.163.25.77]</li>
+							<li> 21   435 ms   509 ms   283 ms  203.197.33.153.static.vsnl.net.in [203.197.33.15
+3]</li>
+							<li> 22     *        *        *     Request timed out.</li>
+							<li> 23     *        *        *     Request timed out.</li>
+							<li> 24     *        *        *     Request timed out.</li>
+							<li> 25     *     203.197.33.153.static.vsnl.net.in [203.197.33.153]  reports: Destination host unreachable.</li>
+						</ul>
+					</div>
+					<hr />
+					
+					<div class="doc-section" id="problem4">
+						<h3>Problem 4 - Run WHOIS</h3><br />
+
+						<ul><strong>WHOIS: www.cli.com</strong>
+							<li>WHOIS Server: whois.verisign-grs.com</li>
+							<li>WHOIS Snapshots: DNSstuff first created a snapshot for www.cli.com on Monday, February 20th, 2012, 8:06:55 PM. We have not seen any changes to the records since that date. </li>
+							<li>Discovered Nameservers: [ NOT DETECTED ]</li>
+							<li>Registrar Information: [ NOT DETECTED ]</li>
+						</ul>
+						<p><strong>Explanation: </strong>The WHOIS database was not that informative because the website has not been updated in quite sometime. To find more information, I went to the website itself and found out: "From its founding, in 1983, through 1997 Computational Logic Inc. (CLI) performed advanced research and development in mathematical modeling of digital hardware and software systems. This web site provides an archive for those results"
+					</div>
+					<hr />
+
+					<div class="doc-section" id="mainpage">
+						<h3>Main Page</h3>
+						<p><strong><a href="index.html">Click here</a></strong> to redirected back to the main webpage.</p>
+					</div>
+					<hr />
+					
+					<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+				</div><!-- content -->
+			</div><!-- container -->
+
+			<div class="resize"></div>
+
+		<!-- JS
+		================================================== -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+		<script>
+			$('.hidden-code').click(function(e) {
+				e.preventDefault();
+				$(this).children('.gist').slideToggle();
+			})
+
+			var originalText;
+			$('.example-grid').children().hover(
+				function() {
+					originalText = $(this).text();
+					$(this).html($(this).width()+'px');
+				},
+				function() {
+					$(this).html(originalText);
+				})
+		</script>
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-33397759-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+
+		<script type="text/javascript">
+		  var _gauges = _gauges || [];
+		  (function() {
+		    var t   = document.createElement('script');
+		    t.type  = 'text/javascript';
+		    t.async = true;
+		    t.id    = 'gauges-tracker';
+		    t.setAttribute('data-site-id', '4d806d7410cafd7fa4000011');
+		    t.src = '//secure.gaug.es/track.js';
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(t, s);
+		  })();
+		</script>
+
+	</body>
+</html>

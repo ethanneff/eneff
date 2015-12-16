@@ -1,0 +1,36 @@
+
+/*	Animations - WebKit only
+------------------------------------------ */
+
+.boat {
+	-webkit-animation: rock-boat 3s ease-in-out infinite;
+}
+.boat::after {
+	-webkit-animation: steam 4s 2s infinite;
+}
+
+
+/*	Keyframes - WebKit only
+------------------------------------------ */
+
+@-webkit-keyframes rock-boat {
+	50%  { -webkit-transform: rotate(-5deg) translateY(-10px); }
+}
+
+@-webkit-keyframes steam {
+	40%,
+	60%  { opacity: 1; }
+	100% { -webkit-transform: translate(-15%, -35%) rotateZ(20deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,146 @@
+/* ==========================================================================
+   GENERAL
+   ========================================================================== */
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding-top: 25px;
+	background: #ECF0F1;
+	color: #FFF;
+	font: 1.3em/1.6 sans-serif;
+}
+
+
+
+/* ==========================================================================
+   CONTAINER
+   ========================================================================== */
+.wrap {
+	margin: auto;
+	width: 90%;
+}
+
+
+
+/* ==========================================================================
+   CONTENT: GENERAL
+   ========================================================================== */
+.col {
+	height: 240px;
+}
+.main-header, .main-footer, .col {
+	margin-bottom: 15px;
+	padding: 2.15%;
+	border-radius: 5px;
+}
+.logo, .main-nav a {
+	display: inline-block;
+	color: #FFF;
+	text-decoration: none;
+}
+.content, .main-header {
+	overflow: hidden;
+}
+
+
+
+/* ==========================================================================
+   CONTENT: HEADER
+   ========================================================================== */
+.main-header {
+	background: #34495E;
+	text-align: center;
+}
+
+
+
+/* ==========================================================================
+   CONTENT: NAV
+   ========================================================================== */
+.main-nav a {
+	padding: 0 .75em;
+	border-right: 1px dotted;
+	color: rgba(255,255,255, .8);
+	font-size: .7em;
+	line-height: 1rem;
+}
+.main-nav a:hover {
+	text-decoration: underline;
+}
+.main-nav a:last-child {
+	border-right: none;
+}
+
+
+
+/* ==========================================================================
+   CONTENT: MAIN
+   ========================================================================== */
+.main {
+	background: #3498DB;
+}
+.secondary {
+	background: #2ECC71;
+}
+.extra {
+	background: #E74C3C;
+	display: none;
+}
+
+
+
+/* ==========================================================================
+   CONTENT: FOOTER
+   ========================================================================== */
+.main-footer {
+	background: #95A5A6;
+}
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 480px) { /* tablet */
+	.col {
+		float: left;
+	}
+	.main {
+		width: 65.957446808511%;
+	}
+	.secondary {
+		width: 31.914893617021%;
+	}
+	.secondary, .extra {
+		margin-left: 2.127659574468%
+	}
+}
+
+@media only screen and (min-width: 769px) { /* desktop */
+	.logo {
+		float: left;
+	}
+	.main-nav {
+		float:right;
+	}
+	.col {
+		float: left;
+	}
+	.main {
+		width: 40.425531914894%;
+	}
+	.extra {
+		width: 23.404255319149%;
+		margin-left: 2.127659574468%;
+		display: block; /*show*/
+	}
+}
+
+@media only screen and (min-width: 1024px) { /* max */
+	.wrap {
+		width: 980px;
+	}
+}
+

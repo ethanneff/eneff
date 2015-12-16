@@ -1,0 +1,14 @@
+/* ------------------------
+	Linear Gradients
+--------------------------- */
+
+.box {
+	width: 500px;
+	height: 500px;
+	margin: 35px auto;
+	border-radius: 15px;
+	background: -webkit-linear-gradient(270deg, orange, darkblue, purple);
+	background: -moz-linear-gradient(270deg, orange, darkblue, purple);
+	background: -o-linear-gradient(270deg, orange, darkblue, purple);
+	background: linear-gradient(180deg, orange, darkblue, purple);
+}

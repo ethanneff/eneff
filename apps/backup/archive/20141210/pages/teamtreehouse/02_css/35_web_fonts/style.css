@@ -1,0 +1,127 @@
+
+/* --------------------------
+	Margin Reset
+----------------------------- */
+
+body, h1, h2, h3, p {
+	margin: 0;
+} 
+
+/* ---------------------------
+	Web Fonts
+----------------------------- */
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'DroidSerifBold';
+    src: url('fonts/DroidSerif-Bold-webfont.eot');
+    src: url('fonts/DroidSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/DroidSerif-Bold-webfont.woff') format('woff'),
+         url('fonts/fonts/DroidSerif-Bold-webfont.ttf') format('truetype'),
+         url('fonts/DroidSerif-Bold-webfont.svg#DroidSerifBold') format('svg');
+}
+
+/* --------------------------
+	Icon Fonts
+----------------------------- */
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('icons/icomoon.eot');
+	src:url('icons/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('icons/icomoon.woff') format('woff'),
+		url('icons/icomoon.ttf') format('truetype'),
+		url('icons/icomoon.svg#icomoon') format('svg');
+}
+
+/* --------------------------
+	Page Styles
+----------------------------- */
+
+body {
+	padding: 4.65em 0;
+ 	border-top: 8px solid #222; 
+	background: #f9f9f9;
+	color: #333;
+	font-size: 1.125em;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.6;
+}
+p {
+	margin: 1.6em 0;
+	text-align: left;
+}
+a {
+	color: #d24c39;
+}
+.wrap {
+	position: relative;
+	margin: 0 auto;
+	max-width: 58%;
+}
+.wrap:before {
+	position: absolute;
+	top: -31px;
+	left: 45%;
+	z-index: 100;
+	padding: .4em;
+	border-radius: 50%;
+	background:#2B9BD4;
+	color: #FFF;
+	content: "\e002";
+	font-size: 1.9em;
+	font-family: 'icomoon';
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.intro {
+	margin-top: 3.15em;
+}
+.title {
+	position: relative;
+	padding: .82em 0 0 0;
+	border-top: 1px solid rgba(51,52,52,.4);
+	text-align: center;
+	font-family: "ff-tisa-web-pro", serif;
+	line-height: 1.33;
+    -webkit-font-feature-settings: "liga", "dlig";
+}
+.author {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.778em;
+}
+h2 {
+	margin: 1.25em 0 0 0;
+	color: #2B9BD4;
+	letter-spacing: -2px;
+	font-size: 2em;
+	font-family: 'DroidSerifBold', Georgia, serif;
+	line-height: 1.1;
+}
+
+/* --------------------------
+	Media Queries
+----------------------------- */
+
+@media screen and (max-width: 599px) {
+	body {
+		font-size: 1em;
+	}
+	.wrap {
+		max-width: 85%;
+	}
+	h2 {
+		font-size: 1.6em;
+	}
+}
+@media screen and (min-width: 980px) {
+	.wrap {
+		max-width: 600px;
+	}
+} 
+
+
+
+

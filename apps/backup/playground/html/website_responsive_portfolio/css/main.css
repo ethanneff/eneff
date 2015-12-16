@@ -1,0 +1,220 @@
+/**************************************
+GENERAL
+***************************************/
+
+body {
+  font-family: 'Open Sans', sans-serif; /* backup of sans-serif if cannot get open sans */
+}
+
+#wrapper {
+  max-width: 940px;
+  margin: 0 auto; /* top and bottom = 0 , sides = auto */
+  padding: 0 5%; /* content */
+}
+
+a {
+  text-decoration:none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h3 {
+  margin: 0 0 1em 0;
+}
+
+/**************************************
+HEADING
+***************************************/
+
+header {
+  float: left;
+  margin: 0 0 30px 0;
+  padding: 5px 0 0 0;
+  width: 100%; /* because floating element */
+}
+
+#logo {
+  text-align: center;
+  margin: 0; /* no spacing around the edges */
+}
+
+h1 {
+  font-family: 'Changa One', sans-serif;
+  margin: 15px 0;
+  font-size: 1.75em;  /* multiplyer relative to 16 px on default on browsers */
+  font-weight: normal; /* h1 are bold by normal */
+  line-height: 0.8em; /* space between each line of text */
+}
+
+h2 {
+  font-size: 0.75em;
+  margin: -5px 0 0; /* top, left/right, bottom */
+  font-weight: normal;
+}
+
+
+
+/**************************************
+NAVIGATION
+***************************************/
+
+nav {
+  text-align: center;
+  padding: 10px 0;
+  margin: 20px 0 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+ font-weight: 800;
+  padding: 15px 10px;
+}
+
+
+/**************************************
+FOOTER
+***************************************/
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  padding-top: 50px;
+  color: #ccc;
+  clear: both;
+
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+
+
+/**************************************
+PAGE: PORTFOLIO
+***************************************/
+
+#gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#gallery li {
+  float: left;
+  width: 45%;
+  margin: 2.5%;
+  background-color: #f5f5f5;
+  color: #bdc3c7;
+}
+
+#gallery li a p {
+  margin: 0;
+  padding: 5%;
+  font-size: 0.75em;
+  color: #bdc3c7;
+}
+
+
+
+/**************************************
+PAGE: ABOUT
+***************************************/
+
+.profile-photo {
+  display: block; /* images are default inline */
+  max-width: 150px;
+  margin: 0 auto 30px;
+  border-radius: 100%; /* round image */
+}
+
+
+
+/**************************************
+PAGE: CONTACT
+***************************************/
+
+.contact-info {  /* distingush pages based on classes or ids */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.contact-info a {
+  display: block; /* each of the anchor elements will take up space */
+  min-height: 20px;
+  background-repeat: no-repeat; /* background images repeat on default */
+  background-size: 20px 20px;
+  padding: 0 0 0 30px; /* padding on left side - to move text */
+  margin: 0 0 10px; /* 10px on bottom - between lines */
+}
+
+.contact-info li.phone a {
+  background-image: url('../img/phone.png'); /* up 2 directories, then back in */
+}
+
+.contact-info li.mail a {
+  background-image: url('../img/mail.png'); /* up 2 directories, then back in */
+}
+
+.contact-info li.twitter a {
+  background-image: url('../img/twitter.png'); /* up 2 directories, then back in */
+}
+
+/**************************************
+COLORS
+***************************************/
+
+/* site body */
+body {
+  background-color: #fff;
+  color: #999;
+}
+
+/* green header */
+header {
+  background: #6ab47b ;
+  border-color: #599a68;
+}
+
+/* nav background on mobile */
+nav {
+  background: #599a68;
+}
+
+/* logo text */
+h1, h2 {
+  color: #fff;
+}
+
+/* links */
+a {
+  color: #6ab47b;
+}
+
+/* nav links */
+nav a, nav a:visited { /* nav links stay the same color even if previously selected */
+  color: #fff;
+}
+
+/* selected nav links */
+nav a.selected, nav a:hover { /* if anchor element has class selected */
+  color : #32673f;
+}
+
+
+

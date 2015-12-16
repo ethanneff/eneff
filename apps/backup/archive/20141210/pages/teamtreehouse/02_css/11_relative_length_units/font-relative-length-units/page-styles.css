@@ -1,0 +1,44 @@
+
+ /* Page Styles
+ --------------------------------------------- */
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  width: 75%;
+  margin: 0 auto;
+  color: #FFF;
+  padding: 2em 0;
+  background: #000;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  position: relative;
+  border-bottom: 1px dotted #a3a3a3;
+}
+
+.box {
+  color: #253641;
+  display: inline-block;
+  padding: 15px 30px;
+  margin-bottom: 1.3em;
+  background: #85bad7;
+  box-sizing: border-box;
+}
+
+ul {
+  margin-top: 10px;
+}
+
+li {
+  padding: 8px 0;
+}
+
+
+
+
+
+

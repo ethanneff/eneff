@@ -1,0 +1,23 @@
+body {
+	color: #222;
+	font: normal 1.2em/1.5 Sans-Serif;
+	margin: 40px auto 0;
+	width: 78%;
+}
+div {
+	background-color: #919090;
+	color: white;
+	float: left;
+	width: 165px;
+	height: 165px;
+	margin: 50px 40px 40px 0;
+	padding: 20px;
+}
+p {
+	clear: both;
+}
+
+/* Structural Pseudo-classes. Keep up the good work! :) */
+p:only-of-type {
+	background-color: steelblue;
+}

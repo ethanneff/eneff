@@ -1,0 +1,26 @@
+
+/* Relative Length Units
+--------------------------------------------- */
+
+/* 1em = 16px on browsers */
+html {
+	font-size: 1em;
+}
+
+.box {
+	width: 12em;
+	font-size: 2em;
+}
+
+/* compounds the em pixel */
+p {
+	font-size: .75em;
+}
+
+/* rem = based on relative on root element... so no compounding */
+h1 {
+	font-size: .75rem;
+}
+
+
+

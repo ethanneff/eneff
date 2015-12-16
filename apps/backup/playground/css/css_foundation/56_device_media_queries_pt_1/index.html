@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media Queries</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Sintony:700">
+	<link rel="stylesheet" href="css/page.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="main-header group">
+		<div class="inner">
+			<a class="logo" href="home.html"></a>
+			<nav class="main-nav">
+				<a href="#">My Link 1</a>
+				<a href="#">My Link 2</a>
+				<a href="#">My Link 3</a>
+				<a href="#">My Link 4</a>
+			</nav>
+		</div>
+	</header>
+	<div class="wrap">
+		<div class="content group">
+			<div class="main col">
+				<h1 id="title" class="title">CSS Preprocessors</h1>
+				<div class="author group">
+					<i class="mike"></i> By: <a href="#">Mike the Frog</a> &ndash; May 20, 2013
+				</div>
+				<p class="intro">
+					You've probably already heard of <a href="http://css-preprop.com">CSS preprocessors</a> by now, but haven't quite plucked up the courage to try one because of the learning curve, or maybe because &ldquo;preprocessor&rdquo; just plain sounds intimidating. So let's put those uncertainties at ease and go over what preprocessors are, how they work, and which one you might choose. In this article, we'll discuss the 3 most popular ones: <a href="http://sass-lang.com/">Sass</a>, <a href="http://lesscss.org/">LESS</a> and <a href="http://learnboost.github.io/stylus/">Stylus</a>.
+				</p>
+				<a href="css3.html"><img src="img/css.jpg"></a>
+				<h2>What's a Preprocessor?</h2>
+				<p>
+					Preprocessors <strong>compile the CSS code we write</strong> in a processed language to the pure CSS syntax we're all used to. If you've recently considered using a CSS preprocessor, there's no better time to dive in with all the options and helpful tools available.
+				</p>
+				<p>
+					Until recently, there was a lot of resistance from developers who argued that preprocessors steered too far from pure CSS, added more layers of complexity and that &ldquo;If it's not broken, don't fix it.&rdquo; But lately, many have realized just how powerful preprocessors can make our CSS.
+				</p>
+				<h2>Why Use One?</h2>
+				<p>
+					There are various reasons why CSS preprocessors can be a valuable tool in our development process. First, they don't break browser compatibility; LESS, Sass and Stylus are all valid CSS and vice versa. Another advantage is preprocessors make our CSS DRY (Don't Repeat Yourself) by allowing us to create <a href="http://foo-var.com">variables</a> from reusable CSS properties, which makes our code more modular and scalable, so our CSS doesn't get out of hand and become difficult to manage.
+				</p>
+				<p>
+					Preprocessors save us time and do a lot of the tedious stuff for us because they have all the neat features we wish plain vanilla CSS had, like nesting selectors, math functions, referencing a parent selector, even reporting errors by telling us where and why there are errors in our code.
+				</p>
+				<p>
+					The following are helpful tools that do most of the heavy lifting for you.
+				</p>
+					<ul>
+						<li><a href="http://incident57.com/codekit/">CodeKit</a></li>
+						<li><a href="http://livereload.com/">LiveReload</a></li>
+						<li><a href="http://wearekiss.com/simpless">SimpLess</a></li>
+					</ul>
+				<h2>Conclusion</h2>
+				<p>
+					Hopefully now you're feeling more confident about using a CSS preprocessor. When in doubt, you can always fall back to plain CSS in your preprocessor file. Remember that you're not learning an entirely new language&mdash;just a new syntax.
+				</p>
+				<ul>
+
+				</ul>
+				<div class="comments">
+					<h3>Comments</h3>
+					<ul>
+						<li class="comment-post">
+							<span>Tommy Chalkers</span>
+							<p class="">I started learning Sass and I'm playing with SCSS. It's very fun so far, thanks!</p>
+						</li>
+						<li class="comment-post">
+							<span>Danny Wingo</span>
+							<p>I've been considering learning Sass &amp; Compass - would you say they are essential tools to a beginning designer?</p>
+						</li>
+						<li class="comment-post">
+							<span>Maty Seifer</span>
+							<p>I'm currently trying out Sass, I love it so far.</p>
+						</li>
+						<li class="comment-post">
+							<span>Andrew Poley</span>
+							<p>I've been using LESS for over a year. I really like it :)</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar col">
+				<div class="search">
+					<input type="text" placeholder="Search">
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at tincidunt dolor.
+				</p>
+				<ul>
+					<li>Donec porttitor egestas tellus eget ullamcorper. Etiam non leo convallis dolor cursus ultricies.</li>
+					<li>Maecenas lorem mi, fermentum id blandit nec, suscipit quis.</li>
+					<li>Proin nulla augue, dignissim et consequat id, pretium eget eros.</li>
+					<li>Vivamus vestibulum suscipit libero, vel luctus tortor pharetra sit amet.</li>
+				</ul>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at tincidunt dolor.
+				</p>
+			</div>
+		</div>
+		<footer class="main-footer">
+			&copy; 2013 - Awesome CSS3 Tutorials
+		</footer>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="js/fittext.js"></script>
+	<script type="text/javascript">
+		$("#title").fitText(1.1, { minFontSize: '30px', maxFontSize: '72px' });
+	</script>
+</body>
+</html>

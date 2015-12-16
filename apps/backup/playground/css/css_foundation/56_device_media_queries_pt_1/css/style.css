@@ -1,0 +1,98 @@
+
+/* Phones to Tablets & Desktop */
+
+@media screen and (min-width: 769px) {
+	.main-header {
+		padding: 35px 0 25px;
+	}
+	.main-header .inner {
+		padding-left: 2.4%;
+	}
+	.logo {
+		float: left;
+	}
+	.main-nav {
+		float: right; 
+	}
+	.main-nav a, 
+	.main-nav a:first-child {
+		display: inline-block;
+		margin: 0 .2em;
+		padding: .35em 1em;
+		border-radius: 8px;
+	}
+	.main {
+		padding-top: 3.6%;
+		width: 65.957446808511%;
+	}
+	.col {
+		float: left;
+	}
+	h1 {
+		font-size: 3em;
+	}
+	.sidebar {
+		margin-left: 3.127659574468%;
+		width: 30.914893617021%; 
+	}
+	.search {
+		width: 100%;
+		position: relative;
+		top: initial;
+		right: initial;
+		margin-bottom: 2em;
+	}
+}
+@media screen and (min-width: 1024px) {	
+	.wrap, 
+	.main-header .inner {
+		width: 1000px;
+	}
+}
+
+/* Device */
+
+/*@media screen and (max-device-width: 479px) {
+	.comments {
+		display: none;
+	}
+}*/ 
+
+@media screen and (orientation: landscape) {
+	body {
+		background: red;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

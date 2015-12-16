@@ -1,0 +1,35 @@
+.container {
+	margin: auto;
+	width: 740px;
+}
+
+.global {
+	padding-top: 50px;
+	color: white;
+	text-align: center;
+	font-size: 24px;
+}
+
+.main-header {
+	height: 110px;
+	background: royalblue;
+	color: white;
+}
+
+#main-content {
+	padding: 20px;
+ 	height: 800px; 
+	background: lightgray;
+}
+
+#main-content p {
+	font-size: 21px;
+	line-height: 1.5;
+	margin-top: 32px;
+}
+
+.main-footer {
+	height: 100px;
+	background: #222;
+	color: white;
+}

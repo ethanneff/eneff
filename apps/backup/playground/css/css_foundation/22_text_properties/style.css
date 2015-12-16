@@ -1,0 +1,28 @@
+
+body {
+	padding: 2em 6em;
+}
+	
+
+/* Text Styles
+--------------------------------------------- */
+
+h1 {
+	font-family: Georgia, Times, serif;
+	font-size: 2.5em;
+	text-transform: capitalize;
+}
+
+p {
+	font: 1.5em/1.5 Baskerville, "Times New Roman", Times, serif;
+	text-indent: 1.5em;
+	white-space: pre-wrap;
+}	
+
+a:hover {
+	text-decoration: none;
+}
+
+a {
+	margin-top: 120px;
+}

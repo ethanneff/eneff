@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="medium-12 column"> 
+    <div class="panel radius">
+      <h1>Build a self-destructing message app</h1>
+      <p>Learn how to build this fun little app for iOS and Android by signing up for a Treehouse account today.</p>
+      <p class="button-group radius">
+        <a class="medium button success" href="#">Download the app</a>
+        <a class="medium button" data-reveal-id="formModal">Text me the link</a>
+      </p> 
+    </div>
+  </div>
+</div>
+
+<!-- Form Modal -->
+<div id="formModal" class="reveal-modal small" data-reveal>
+  <h3>We'll Text You the Link!</h3>
+  <form class="custom">
+    <fieldset>
+      <input type="tel" placeholder="Mobile Phone">
+      <select>
+        <option>iOS</option>
+        <option>Android</option>
+      </select>             
+      <button type="submit" class="small button">Text me!</button>
+    </fieldset>
+  </form>
+  <a href="#" class="close-reveal-modal">&#215;</a>
+</div><!-- End Form Modal -->
+
+<script>
+  $(document).foundation();
+</script> 

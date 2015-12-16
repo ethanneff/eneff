@@ -1,0 +1,35 @@
+
+.nav, .main {
+	display: -webkit-flex;
+}
+
+.nav {
+	-webkit-flex-direction: row;
+	-webkit-justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+}
+
+.nav li {
+	-webkit-flex-grow: 1;
+}
+
+.col {
+	-webkit-flex: 1;
+}
+
+.col-c {
+	-webkit-flex: 2;
+	-webkit-order: -1;
+}
+
+@media screen and (max-width: 999px) {
+	.main {
+		-webkit-flex-direction: column;
+	}
+}
+
+
+
+
+
+

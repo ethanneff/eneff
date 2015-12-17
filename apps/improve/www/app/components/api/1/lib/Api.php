@@ -10,14 +10,16 @@ define("ROOT_PATH",$_SERVER["DOCUMENT_ROOT"] . "/");
 define("DEV", 1);
 
 if (DEV) {
-  header("Content-Type: text/html; charset=utf-8");
+  // header("Content-Type: text/html; charset=utf-8");
   ini_set("display_errors", 1);
   ini_set("display_startup_errors", 1);
   error_reporting(E_ALL);
 }
 
 Class Api {
-  public static $errors = [];
+  private static $errors = [];
+  private static $error_status = [400, 500];
+  private static $error_codes = ["missing", "already_exists", "missing_field", "invalid_field"];
 
   public static function response($response) {
     // output and finish
@@ -33,10 +35,20 @@ Class Api {
     exit();
   }
 
-  public static function error($status, $message, $continue) {
-    // 400 (client) or 500 (server)
-    $error =  array("status" => $status, "message" => $message);
+  public static function error($status, $code, $continue, $message) {
+    // 400 (client) missing, already_exists, missing_field, invalid_field
+    // 500 (server)
+    $error =  array("status" => self::$error_status[$status], "code" => self::$error_codes[$code], "message" => $message);
     array_push(self::$errors, $error);
     if (!$continue) self::response("error");
+  }
+
+  public static function get_url_id($dir) {
+    $dir = "/" . $dir . "/";
+    $url = $_SERVER["REQUEST_URI"];
+    $beg = strpos($url, $dir) + strlen($dir);
+    $end = strpos($url, "/", $beg);
+    $id = substr($url, $beg, $end - $beg);
+    return intval($id);
   }
 }

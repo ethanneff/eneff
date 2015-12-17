@@ -22,7 +22,7 @@ RewriteRule ^(.*)([^/])$ http://%{HTTP_HOST}/$1$2/ [L,R=301]
 ErrorDocument 400 /apps/portfolio/www/app/shared/errors/400.php
 ErrorDocument 401 /apps/portfolio/www/app/shared/errors/401.php
 ErrorDocument 403 /apps/portfolio/www/app/shared/errors/403.php
-ErrorDocument 404 /apps/portfolio/www/app/shared/errors/404.php
+# ErrorDocument 404 /apps/portfolio/www/app/shared/errors/404.php
 ErrorDocument 500 /apps/portfolio/www/app/shared/errors/500.php
 
 # redirect

@@ -1,0 +1,19 @@
+body {
+  margin-bottom: 2em;
+}
+
+.content {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.center > li {
+  display: inline-block;
+  float: none;
+}
+
+.center {
+  float: none;
+  /*padding: 0;*/
+  /*margin: 0;*/
+}

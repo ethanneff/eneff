@@ -15,7 +15,7 @@ RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,QSA,NC,L]
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # force trailing slash
-RewriteCond %{REQUEST_URI}  !\.(php|html?|jpg|gif|css|js|png)$
+RewriteCond %{REQUEST_URI}  !\.(php|html?|jpg|gif|css|js|png|eot|svg|ttf|woff|woff2)$
 RewriteRule ^(.*)([^/])$ http://%{HTTP_HOST}/$1$2/ [L,R=301]
 
 # custom error pages
@@ -33,6 +33,7 @@ RewriteRule ^portfolio/$ apps/portfolio/www/index.php
 
 # improve api
 RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$2.php
+RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$3/$3.php
 RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/$ /apps/improve/www/app/components/api/$1/$2/$2.php?id=$3
 RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$4.php
 RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$4.php?id=$5

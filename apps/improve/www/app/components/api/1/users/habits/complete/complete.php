@@ -1,5 +1,4 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === "POST") {
-  // create
-}
+$type = "habits";
+require_once("../../items/complete/complete.php");

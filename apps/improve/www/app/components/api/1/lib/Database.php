@@ -30,13 +30,13 @@ class Database {
     if (self::$db) {
       return self::$db;
     } else {
-      Api::error(1, 0, 0, "could not connect to database");
+      return "error_database";
     }
   }
 
-  public static function query($query, $params, $read) {
+  public static function query($query, $params, $type) {
     $success = false;
-    $params = (null === $params) ? array() : $params;
+    $params = (false === $params) ? array() : $params;
     $retry = self::$retrys;
 
     if (!self::$db) self::connect();
@@ -46,7 +46,7 @@ class Database {
         $stmt = self::$db->prepare($query);
         $i = 0;
         foreach ($params as $key => &$val) {
-          if ($val !== null) {
+          if ($val !== false) {
             $stmt->bindParam(++$i, $val);
           }
         }
@@ -54,30 +54,35 @@ class Database {
         if ($success) break;
       } catch (Exception $e) {
         if (strpos(strtolower($e->getMessage()), "invalid parameter number") !== false) {
-          Api::error(0, 2, 0, "invalid parameter number when querying the database");
+          return "error incorrect parameters";
         } else if (strpos(strtolower($e->getMessage()), "duplicate entry") !== false) {
-          Api::error(0, 1, 0, "duplicated entry in database");
+          return "error duplication within database";
         }
-        trigger_error("could not query database. Code: " . $e->getCode() . " message: " . $e->getMessage(), E_USER_WARNING);
+        // trigger_error("could not query database. Code: " . $e->getCode() . " message: " . $e->getMessage(), E_USER_WARNING);
         $retry--;
         usleep(self::$wait);
       }
     }
 
     if ($success) {
-      if ($read) {
+      if ($type === 1) {
+        // read
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if (empty($results)) {
-          Api::error(0, 0, 0, "no data found within database");
+          return "error no data found in the database";
         } else {
           return $results;
         }
+      } else if ($type === 2) {
+        // create
+        return self::$db->lastInsertId();
       } else {
+        // update
         if ($stmt->rowCount() > 0) return true;
-        return false;
+        return "error no changes were made in the database";
       }
     } else {
-      Api::error(1, 0, 0, "could not query database");
+      return "error query failed";
     }
   }
 }

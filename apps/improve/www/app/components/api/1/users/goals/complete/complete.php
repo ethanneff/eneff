@@ -1,7 +1,4 @@
-complete
-
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === "POST") {
-  // create
-}
+$type = "goals";
+require_once("../../items/complete/complete.php");

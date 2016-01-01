@@ -18,7 +18,7 @@ class Item {
     $sql["is_active"] = ($data["is_active"] === false) ? "1" : "?";
 
     $sql = "INSERT INTO
-    items (user_id, category_id, purpose, vision, methodology, is_example, is_active)
+    item (user_id, category_id, purpose, vision, methodology, is_example, is_active)
     VALUES ("
     . $sql["user_id"] . ", "
     . $sql["category_id"] . ", "
@@ -48,9 +48,9 @@ class Item {
     , i.methodology item_methodology
     , t.id type_id
     , c.id category_id
-    FROM items i
-    INNER JOIN categories c ON i.category_id = c.id
-    INNER JOIN types t ON c.type_id = t.id
+    FROM item i
+    INNER JOIN category c ON i.category_id = c.id
+    INNER JOIN type t ON c.type_id = t.id
     WHERE 1=1
     AND i.is_active
     AND c.is_active
@@ -82,7 +82,7 @@ class Item {
     $sql["is_active"] = ($data["is_active"] === false) ? "is_active" : "?";
     $sql["item_id"] = ($data["item_id"] === false) ? "id" : "?";
 
-    $sql = "UPDATE items
+    $sql = "UPDATE item
     SET user_id = " . $sql["user_id"] . "
     , category_id = " . $sql["category_id"] . "
     , purpose = " . $sql["purpose"] . "
@@ -100,7 +100,7 @@ class Item {
 
     $params = [$data["item_id"]];
 
-    $sql = "UPDATE items SET is_active = 0 WHERE id = ?";
+    $sql = "UPDATE item SET is_active = 0 WHERE id = ?";
 
     return Database::query($sql,$params,0);
   }

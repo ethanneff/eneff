@@ -18,7 +18,7 @@ class User {
   public static function login($data) {
     // validate pass
     $sql = "SELECT id, password, access_token
-    FROM users
+    FROM user
     WHERE 1=1
     AND email = ?";
 
@@ -31,7 +31,7 @@ class User {
       $data["id"] = $user[0]["id"];
       $data["access_token"] = self::authorize($data["email"] ,$data["password"] );
 
-      $sql = "UPDATE users
+      $sql = "UPDATE user
       SET access_token = ?
       WHERE id = ?";
 
@@ -46,7 +46,7 @@ class User {
   public static function logout($data) {
     $sql_id = ($data["id"] === false) ? "id" : "?";
 
-    $sql = "UPDATE users
+    $sql = "UPDATE user
     SET access_token = NULL
     WHERE id = " . $sql_id;
 
@@ -59,7 +59,7 @@ class User {
     $data["password"] = password_hash($data["password"], PASSWORD_DEFAULT);
     $data["access_token"] = self::authorize($data["email"] ,$data["password"] );
 
-    $sql = "INSERT INTO users (email, password, access_token) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO user (email, password, access_token) VALUES (?, ?, ?)";
     $params = $data;
     return Database::query($sql,$params,0);
   }
@@ -72,7 +72,7 @@ class User {
     $sql["email"] = ($data["email"] === false) ? "email" : "?";
 
     $sql = "SELECT id, email, access_token
-    FROM users
+    FROM user
     WHERE 1=1
     AND is_active
     AND id = " . $sql["id"] . "
@@ -92,7 +92,7 @@ class User {
 
     $data["password"] = ($data["password"] === false) ? $data["password"] : self::hash($data["password"]);
 
-    $sql = "UPDATE users
+    $sql = "UPDATE user
     SET email = " . $sql_email . "
     , password = " . $sql_password . "
     , is_active = " . $sql_is_active . "
@@ -107,7 +107,7 @@ class User {
   public static function delete($data) {
     $sql_id = ($data["id"] === false) ? "id" : "?";
 
-    $sql = "UPDATE users
+    $sql = "UPDATE user
     SET is_active = 0
     WHERE id = " . $sql_id;
 

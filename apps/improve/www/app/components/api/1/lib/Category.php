@@ -7,7 +7,7 @@ class Category {
 
   public static function create($array) {
     // E-TODO: need to add to memcache
-    $sql = "INSERT INTO types (title, subtitle, caption, is_active, type_id) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO type (title, subtitle, caption, is_active, type_id) VALUES (?, ?, ?, ?, ?)";
     $params = $array;
     return Database::query($sql,$params,0);
   }
@@ -20,7 +20,7 @@ class Category {
     , c.title title
     , c.subtitle subtitle
     , c.caption caption
-    FROM categories c
+    FROM category c
     WHERE 1=1
     AND c.is_active
     AND c.id = " . $sql_category_id . "
@@ -38,7 +38,7 @@ class Category {
 
   public static function delete($id) {
     // E-TODO: need to reset memcache
-    $sql = "UPDATE categories SET is_active = 0 WHERE id = ?";
+    $sql = "UPDATE category SET is_active = 0 WHERE id = ?";
     $params = [$id];
     return Database::query($sql,$params,0);
   }

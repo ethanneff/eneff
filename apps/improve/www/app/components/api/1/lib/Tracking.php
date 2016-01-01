@@ -9,7 +9,7 @@ class Tracking {
     $params = [$data["user_id"], $data["item_id"]];
 
     $sql = "INSERT INTO
-    trackings (user_id, item_id, activity_id)
+    tracking (user_id, item_id, activity_id)
     VALUES (?, ?, $activity)";
 
     return Database::query($sql,$params,0);

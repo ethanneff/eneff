@@ -7,7 +7,7 @@ class Type {
 
   public static function create($array) {
     // E-TODO: need to add to memcache
-    $sql = "INSERT INTO types (title, subtitle, caption, is_active) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO type (title, subtitle, caption, is_active) VALUES (?, ?, ?, ?)";
     $params = $array;
     return Database::query($sql,$params,0);
   }
@@ -19,7 +19,7 @@ class Type {
     , t.title title
     , t.subtitle subtitle
     , t.caption caption
-    FROM types t
+    FROM type t
     WHERE 1=1
     AND t.is_active
     AND t.id = " . $sql_type_id . "
@@ -37,7 +37,7 @@ class Type {
 
   public static function delete($id) {
     // E-TODO: need to reset memcache
-    $sql = "UPDATE types SET is_active = 0 WHERE id = ?";
+    $sql = "UPDATE type SET is_active = 0 WHERE id = ?";
     $params = [$id];
     return Database::query($sql,$params,0);
   }

@@ -72,7 +72,7 @@ Class Api {
     $access_token = $headers["Authorization"];
 
     $sql = "SELECT 1
-    FROM users
+    FROM user
     WHERE 1=1
     AND is_active
     AND id = ?

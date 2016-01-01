@@ -11,15 +11,16 @@ Api::authenticate();
 // params
 $output = false;
 $data["user_id"] = Api::get_url_id("users");
+$data["item_id"] = (isset($_GET["id"])) ? Validate::int($_GET["id"]) : false;
 
 if (strtoupper($_SERVER["REQUEST_METHOD"]) === "GET") {
-  $data["item_id"] = (isset($_GET["id"])) ? Validate::int($_GET["id"]) : false;
   $data["category_id"] = (isset($_GET["category_id"])) ? Validate::int($_GET["category_id"]) : false;
   $data["type_id"] = (isset($_GET["type_id"])) ? Validate::int($_GET["type_id"]) : false;
   $data["is_example"] = (isset($_GET["is_example"])) ? Validate::bool($_GET["is_example"]) : false;
   $data["is_active"] = (isset($_GET["is_active"])) ? Validate::bool($_GET["is_active"]) : false;
 }
 if (strtoupper($_SERVER["REQUEST_METHOD"]) === "POST" || strtoupper($_SERVER["REQUEST_METHOD"]) === "PUT") {
+  $data["type_id"] = (isset($_POST["type_id"])) ? Validate::int($_POST["type_id"]) : false;
   $data["category_id"] = (isset($_POST["category_id"])) ? Validate::int($_POST["category_id"]) : false;
   $data["purpose"] = (isset($_POST["purpose"])) ? Validate::string($_POST["purpose"]) : false;
   $data["vision"] = (isset($_POST["vision"])) ? Validate::string($_POST["vision"]) : false;
@@ -63,6 +64,7 @@ function test_update() {
   $_SERVER["REQUEST_METHOD"] = "PUT";
   $_POST["vision"] = "   hi2    ";
   $_POST["purpose"] = "   hi    ";
+  $_POST["category_id"] = "1";
 }
 
 function test_delete() {

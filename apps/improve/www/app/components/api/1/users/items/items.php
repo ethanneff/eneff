@@ -11,16 +11,22 @@ Api::authenticate();
 // params
 $output = false;
 $data["user_id"] = Api::get_url_id("users");
-$data["item_id"] = (!empty($_GET["id"])) ? Validate::int($_GET["id"]) : false;
-$data["category_id"] = (!empty($_GET["category_id"])) ? $_GET["category_id"] : false;
-$data["type_id"] = (!empty($type_id)) ? Validate::int($type_id) : false;
 
-$data["category_id"] = (!empty($_POST["category_id"])) ? Validate::int($_POST["category_id"]) : false;
-$data["purpose"] = (!empty($_POST["purpose"])) ? Validate::string($_POST["purpose"]) : false;
-$data["vision"] = (!empty($_POST["vision"])) ? Validate::string($_POST["vision"]) : false;
-$data["methodology"] = (!empty($_POST["methodology"])) ? Validate::string($_POST["methodology"]) : false;
-$data["is_example"] = (!empty($_POST["is_example"])) ? Validate::bool($_POST["is_example"]) : false;
-$data["is_active"] = (!empty($_POST["is_active"])) ? Validate::bool($_POST["is_active"]) : false;
+if (strtoupper($_SERVER["REQUEST_METHOD"]) === "GET") {
+  $data["item_id"] = (isset($_GET["id"])) ? Validate::int($_GET["id"]) : false;
+  $data["category_id"] = (isset($_GET["category_id"])) ? Validate::int($_GET["category_id"]) : false;
+  $data["type_id"] = (isset($_GET["type_id"])) ? Validate::int($_GET["type_id"]) : false;
+  $data["is_example"] = (isset($_GET["is_example"])) ? Validate::bool($_GET["is_example"]) : false;
+  $data["is_active"] = (isset($_GET["is_active"])) ? Validate::bool($_GET["is_active"]) : false;
+}
+if (strtoupper($_SERVER["REQUEST_METHOD"]) === "POST" || strtoupper($_SERVER["REQUEST_METHOD"]) === "PUT") {
+  $data["category_id"] = (isset($_POST["category_id"])) ? Validate::int($_POST["category_id"]) : false;
+  $data["purpose"] = (isset($_POST["purpose"])) ? Validate::string($_POST["purpose"]) : false;
+  $data["vision"] = (isset($_POST["vision"])) ? Validate::string($_POST["vision"]) : false;
+  $data["methodology"] = (isset($_POST["methodology"])) ? Validate::string($_POST["methodology"]) : false;
+  $data["is_example"] = (isset($_POST["is_example"])) ? Validate::bool($_POST["is_example"]) : false;
+  $data["is_active"] = (isset($_POST["is_active"])) ? Validate::bool($_POST["is_active"]) : false;
+}
 
 // actions
 if (strtoupper($_SERVER["REQUEST_METHOD"]) === "GET") {

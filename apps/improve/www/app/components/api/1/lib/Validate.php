@@ -2,20 +2,23 @@
 
 class Validate {
   public static function bool($var) {
-    if ($var === false || $var === true) {
-      return trim($var);
+    $var = strtolower(trim($var));
+    if ($var === false || $var === 0 || $var === "0" || $var === "false" || $var === "no") {
+      return 0;
+    } else if ($var === true || $var === 1 || $var === "1" || $var === "true" || $var === "yes") {
+      return 1;
     }
     Api::error(400, 0, "invalid field bool " . $var);
   }
   public static function int($var) {
     if (filter_var($var, FILTER_VALIDATE_INT)) {
-      return trim($var);
+      return intval(trim($var));
     }
     Api::error(400, 0, "invalid field int " . $var);
   }
   public static function float($var) {
     if (filter_var($var, FILTER_VALIDATE_FLOAT)) {
-      return trim($var);
+      return floatval(trim($var));
     }
     Api::error(400, 0, "invalid field float " . $var);
   }

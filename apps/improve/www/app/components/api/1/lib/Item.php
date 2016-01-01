@@ -5,17 +5,17 @@ require_once("Database.php");
 class Item {
 
   public static function create($data) {
-    if (!empty($data["item_id"])) return "error cannot create on individual item";
+    if ($data["item_id"] !== false) return "error cannot create on individual item";
 
     $params = [$data["user_id"], $data["category_id"], $data["purpose"], $data["vision"], $data["methodology"], $data["is_example"], $data["is_active"]];
 
-    $sql["user_id"] = (empty($data["user_id"])) ? "null" : "?";
-    $sql["category_id"] = (empty($data["user_id"])) ? "null" : "?";
-    $sql["purpose"] = (empty($data["purpose"])) ? "null" : "?";
-    $sql["vision"] = (empty($data["vision"])) ? "null" : "?";
-    $sql["methodology"] = (empty($data["methodology"])) ? "null" : "?";
-    $sql["is_example"] = (empty($data["is_example"])) ? "0" : "?";
-    $sql["is_active"] = (empty($data["is_active"])) ? "1" : "?";
+    $sql["user_id"] = ($data["user_id"] === false) ? "null" : "?";
+    $sql["category_id"] = ($data["user_id"] === false) ? "null" : "?";
+    $sql["purpose"] = ($data["purpose"] === false) ? "null" : "?";
+    $sql["vision"] = ($data["vision"] === false) ? "null" : "?";
+    $sql["methodology"] = ($data["methodology"] === false) ? "null" : "?";
+    $sql["is_example"] = ($data["is_example"] === false) ? "0" : "?";
+    $sql["is_active"] = ($data["is_active"] === false) ? "1" : "?";
 
     $sql = "INSERT INTO
     items (user_id, category_id, purpose, vision, methodology, is_example, is_active)
@@ -32,12 +32,14 @@ class Item {
   }
 
   public static function read($data) {
-    $params = [$data["user_id"], $data["type_id"], $data["category_id"], $data["item_id"]];
+    $params = [$data["user_id"], $data["type_id"], $data["category_id"], $data["item_id"], $data["is_example"], $data["is_active"]];
 
-    $sql["user_id"] = (empty($data["user_id"])) ? "i.user_id" : "?";
-    $sql["type_id"] = (empty($data["type_id"])) ? "t.id" : "?";
-    $sql["category_id"] = (empty($data["category_id"])) ? "c.id" : "?";
-    $sql["item_id"] = (empty($data["item_id"])) ? "i.id" : "?";
+    $sql["user_id"] = ($data["user_id"] === false) ? "i.user_id" : "?";
+    $sql["type_id"] = ($data["type_id"] === false) ? "t.id" : "?";
+    $sql["category_id"] = ($data["category_id"] === false) ? "c.id" : "?";
+    $sql["item_id"] = ($data["item_id"] === false) ? "i.id" : "?";
+    $sql["is_example"] = ($data["is_example"] === false) ? "i.is_example" : "?";
+    $sql["is_active"] = ($data["is_active"] === false) ? "i.is_active" : "?";
 
     $sql = "SELECT
       i.id item_id
@@ -57,6 +59,8 @@ class Item {
     AND t.id = " . $sql["type_id"] . "
     AND c.id = " . $sql["category_id"] . "
     AND i.id = " . $sql["item_id"] . "
+    AND i.is_example = " . $sql["is_example"] . "
+    AND i.is_active = " . $sql["is_active"] . "
     ORDER BY t.id, c.id, i.id";
 
     // E-TODO: also query last 90 days as 0 & 1 (limit 1 per day)
@@ -65,18 +69,18 @@ class Item {
   }
 
   public static function update($data) {
-    if (empty($data["item_id"])) return "error cannot update on all items";
+    if ($data["item_id"] === false) return "error cannot update on all items";
 
     $params = [$data["user_id"], $data["category_id"], $data["purpose"], $data["vision"], $data["methodology"], $data["is_example"], $data["is_active"], $data["item_id"]];
 
-    $sql["user_id"] = (empty($data["user_id"])) ? "user_id" : "?";
-    $sql["category_id"] = (empty($data["category_id"])) ? "category_id" : "?";
-    $sql["purpose"] = (empty($data["purpose"])) ? "purpose" : "?";
-    $sql["vision"] = (empty($data["vision"])) ? "vision" : "?";
-    $sql["methodology"] = (empty($data["methodology"])) ? "methodology" : "?";
-    $sql["is_example"] = (empty($data["is_example"])) ? "is_example" : "?";
-    $sql["is_active"] = (empty($data["is_active"])) ? "is_active" : "?";
-    $sql["item_id"] = (empty($data["item_id"])) ? "id" : "?";
+    $sql["user_id"] = ($data["user_id"] === false) ? "user_id" : "?";
+    $sql["category_id"] = ($data["category_id"] === false) ? "category_id" : "?";
+    $sql["purpose"] = ($data["purpose"] === false) ? "purpose" : "?";
+    $sql["vision"] = ($data["vision"] === false) ? "vision" : "?";
+    $sql["methodology"] = ($data["methodology"] === false) ? "methodology" : "?";
+    $sql["is_example"] = ($data["is_example"] === false) ? "is_example" : "?";
+    $sql["is_active"] = ($data["is_active"] === false) ? "is_active" : "?";
+    $sql["item_id"] = ($data["item_id"] === false) ? "id" : "?";
 
     $sql = "UPDATE items
     SET user_id = " . $sql["user_id"] . "
@@ -92,7 +96,7 @@ class Item {
   }
 
   public static function delete($data) {
-    if (empty($data["item_id"])) return "error cannot delete on all items";
+    if ($data["item_id"] === false) return "error cannot delete on all items";
 
     $params = [$data["item_id"]];
 

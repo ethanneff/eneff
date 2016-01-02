@@ -53,7 +53,7 @@ class Item {
         FROM tracking r
         WHERE 1=1
         AND r.item_id = i.id
-        AND r.activity_id = 4
+        AND r.activity_id = 5
         AND r.updated_at > SUBDATE(NOW()," . $sql["days"] . ")) tracking
     FROM item i
     INNER JOIN category c ON i.category_id = c.id

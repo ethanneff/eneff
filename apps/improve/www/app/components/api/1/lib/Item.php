@@ -32,8 +32,9 @@ class Item {
   }
 
   public static function read($data) {
-    $params = [$data["user_id"], $data["type_id"], $data["category_id"], $data["item_id"], $data["is_example"], $data["is_active"]];
+    $params = [$data["days"], $data["user_id"], $data["type_id"], $data["category_id"], $data["item_id"], $data["is_example"], $data["is_active"]];
 
+    $sql["days"] = ($data["days"] === false) ? "r.updated_at" : "?";
     $sql["user_id"] = ($data["user_id"] === false) ? "i.user_id" : "?";
     $sql["type_id"] = ($data["type_id"] === false) ? "t.id" : "?";
     $sql["category_id"] = ($data["category_id"] === false) ? "c.id" : "?";
@@ -42,12 +43,18 @@ class Item {
     $sql["is_active"] = ($data["is_active"] === false) ? "i.is_active" : "?";
 
     $sql = "SELECT
-      i.id item_id
+    i.id item_id
     , i.purpose item_purpose
     , i.vision item_vision
     , i.methodology item_methodology
     , t.id type_id
     , c.id category_id
+    , (SELECT GROUP_CONCAT(DATEDIFF(now(), r.updated_at) ORDER BY r.updated_at)
+        FROM tracking r
+        WHERE 1=1
+        AND r.item_id = i.id
+        AND r.activity_id = 4
+        AND r.updated_at > SUBDATE(NOW()," . $sql["days"] . ")) tracking
     FROM item i
     INNER JOIN category c ON i.category_id = c.id
     INNER JOIN type t ON c.type_id = t.id
@@ -63,9 +70,38 @@ class Item {
     AND i.is_active = " . $sql["is_active"] . "
     ORDER BY t.id, c.id, i.id";
 
-    // E-TODO: also query last 90 days as 0 & 1 (limit 1 per day)
+    $results = Database::query($sql,$params,1);
 
-    return Database::query($sql,$params,1);
+    for ($i=0; $i < count($results); $i++) {
+      // format
+      $item = $results[$i];
+      $item["item_id"] = intval($item["item_id"]);
+      $item["type_id"] = intval($item["type_id"]);
+      $item["category_id"] = intval($item["category_id"]);
+
+      // tracking
+      $completed = (!empty($item["tracking"])) ? explode(",", $item["tracking"]) : [];
+      $item["tracking"] = "";
+      $tracking_max = 0;
+      $tracking_count = 0;
+
+      for ($j = $data["days"]-1; $j >= 0; $j--) {
+        if (!empty($completed) && $completed[0] == $j) {
+          $item["tracking"] .= "1";
+          $tracking_count += 1;
+          array_shift($completed);
+        } else {
+          $item["tracking"] .= "0";
+          $tracking_count = 0;
+        }
+        $tracking_max = ($tracking_count > $tracking_max) ? $tracking_count : $tracking_max;
+      }
+
+      $item["consecutive"] = $tracking_max;
+      $results[$i] = $item;
+    }
+
+    return $results;
   }
 
   public static function update($data) {

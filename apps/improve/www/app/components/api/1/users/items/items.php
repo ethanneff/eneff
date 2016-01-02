@@ -18,6 +18,7 @@ if (strtoupper($_SERVER["REQUEST_METHOD"]) === "GET") {
   $data["type_id"] = (isset($_GET["type_id"])) ? Validate::int($_GET["type_id"]) : false;
   $data["is_example"] = (isset($_GET["is_example"])) ? Validate::bool($_GET["is_example"]) : false;
   $data["is_active"] = (isset($_GET["is_active"])) ? Validate::bool($_GET["is_active"]) : false;
+  $data["days"] = (isset($_GET["days"])) ? Validate::int($_GET["days"]) : 30;
 }
 if (strtoupper($_SERVER["REQUEST_METHOD"]) === "POST" || strtoupper($_SERVER["REQUEST_METHOD"]) === "PUT") {
   $data["type_id"] = (isset($_POST["type_id"])) ? Validate::int($_POST["type_id"]) : false;

@@ -1,7 +1,10 @@
+// run 'git commit -am'' ' command
+// run 'fly prod' to sync to production
+
 var plan = require('flightplan');
 
 // configuration
-plan.target('production', [
+plan.target('prod', [
   {
     host: 'eneff.com',
     username: 'enefjzpu',

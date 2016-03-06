@@ -1,0 +1,21 @@
+ul {
+	color: #222;
+	font: normal 1.3em sans-serif;
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 70%;
+}
+li {
+	border: 1px solid;
+	margin: 12px 0;
+	padding: .6em;
+}
+
+/* Structural Pseudo-classes - :nth-child */
+
+li:nth-last-child(-n+4) {
+	color: white;
+	background-color: black;
+	font-weight: bold;
+}

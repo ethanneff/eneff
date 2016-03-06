@@ -1,0 +1,15 @@
+
+/* ------------------------
+	Repeating Gradients
+--------------------------- */
+
+.box {
+	width: 70%;
+	height: 900px;
+	margin: 35px auto;
+
+	background: -webkit-repeating-radial-gradient(0 0, circle, rgba(108,144,188,.8), rgba(75,113,160, .85) 100px);
+	background: -moz-repeating-radial-gradient(0 0, circle, rgba(108,144,188,.8), rgba(75,113,160, .85) 100px);
+	background: -o-repeating-radial-gradient(0 0, circle, rgba(108,144,188,.8), rgba(75,113,160, .85) 100px);
+	background: -ms-repeating-radial-gradient(0 0, circle, rgba(108,144,188,.8), rgba(75,113,160, .85) 100px);
+}

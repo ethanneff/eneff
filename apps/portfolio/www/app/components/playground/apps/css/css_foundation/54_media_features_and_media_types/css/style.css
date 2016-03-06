@@ -1,0 +1,43 @@
+
+/* @import method */
+/*
+@import url("wider.css") screen and (max-width: 768px) and (min-width: 481px);
+@import url("narrow.css") screen and (max-width: 480px);*/
+
+body {
+	font: 1.1em/1.5 sans-serif;
+}
+.wrap {
+	width: 85%;
+	margin: auto;
+}
+h1 {
+	font-size: 3em;
+}
+p {
+	margin-bottom: 1.5em;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+	body {
+		background: #FF6347;
+		color: #FFF;
+	}
+}
+ @media screen and (max-width: 480px) {
+ 	body {
+ 		background: #4682B4;
+ 	}
+ }
+ @media screen and (min-width: 1000px) {
+ 	.wrap {
+ 		width: 700px;
+ 	}
+ }
+
+
+

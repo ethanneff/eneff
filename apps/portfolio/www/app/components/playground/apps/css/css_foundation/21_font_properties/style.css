@@ -1,0 +1,17 @@
+
+body {
+	padding: 2em 6em;
+}
+	
+/* Font Styles
+--------------------------------------------- */
+
+h1 {
+ 	font-family: Georgia, Times, serif;
+ 	font-weight: normal;
+ 	font-size: 2.5em;
+}
+
+p {
+	font: 1.5em Baskerville, "Times New Roman", Times, serif;
+}	

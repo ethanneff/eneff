@@ -79,7 +79,15 @@ class User {
     AND email = " . $sql["email"] . "
     ORDER BY id DESC";
 
-    return Database::query($sql,$params,1);
+    $results = Database::query($sql,$params,1);
+
+    for ($i=0; $i < count($results); $i++) {
+      $user = $results[$i];
+      $user["id"] = intval($user["id"]);
+            $results[$i] = $user;
+    }
+
+    return $results;
   }
 
   public static function update($data) {

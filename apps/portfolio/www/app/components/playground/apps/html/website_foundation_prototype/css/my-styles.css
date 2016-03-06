@@ -1,0 +1,39 @@
+/* Layout
+================================ */
+
+.orbit-container {
+	text-align: center;
+	padding: 30px 20px 0;
+	margin-bottom: 40px;
+}
+.orbit-slides-container div {
+	background: whitesmoke;
+}
+.button-group,
+.orbit-bullets {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Icons
+================================ */
+
+[class*="fi-"] {
+  font-size: 3em;
+  text-align: center;
+  color: #2ba6cb;
+  display: block;
+}
+
+/* Media Queries
+================================ */
+
+@media (max-width: 768px) {
+	.orbit-prev,
+	.orbit-next {
+		display: none;
+	}
+}
+
+

@@ -1,0 +1,15 @@
+
+/* ------------------------
+	Radial Gradients
+--------------------------- */
+
+.box {
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	margin: 40px auto;
+	background: -webkit-radial-gradient(30% 15%, circle farthest-side, aqua, darkblue);
+	background: -moz-radial-gradient(30% 15%, circle farthest-side, aqua, darkblue);
+	background: -o-radial-gradient(30% 15%, circle farthest-side, aqua, darkblue);
+	background: radial-gradient(circle farthest-side at 30% 15%, aqua, darkblue);
+}

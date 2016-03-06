@@ -1,0 +1,35 @@
+
+body {
+	background: #F0FCFF url('img/island.png') repeat-x 100% -460px;
+	background-size: 780px;
+}
+.boat {
+	width: 380px;
+	position: absolute;
+	top: 40%;
+	left: 35%;
+}
+.boat img {
+	width: 100%;
+}
+.boat::after {
+	content: "";
+	display: block;
+	width: 120px;
+	height: 120px;
+	background: url('img/steam.png') no-repeat;
+	background-size: 120px;
+	position: absolute;
+	top: -25%;
+	left: 5%;
+	opacity: 0;
+}
+.mike {
+	width: 180px;
+	position: absolute;
+	top: 55%;
+	left: -15%;
+	-webkit-transform: rotateZ(-5deg);
+}
+
+

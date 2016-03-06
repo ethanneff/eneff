@@ -1,3 +1,6 @@
+// cd ~/Google Drive/active/MAMP/eneff.com
+// sass --watch apps/portfolio/www/assets/css/style.scss:apps/portfolio/www/assets/css/style.css
+
 /************************************************
 GENERAL
 ************************************************/
@@ -82,22 +85,6 @@ body {
     padding: 0.25em;
     margin: 0.25em 0.125em;
     display:inline-block;
-  }
-
-  .purple {
-    background: $color-purple;
-  }
-  .green {
-    background: $color-green;
-  }
-  .orange {
-    background: $color-orange;
-  }
-  .red {
-    background: $color-red;
-  }
-  .blue {
-    background: $color-blue;
   }
 }
 
@@ -268,10 +255,6 @@ HEADER
 header {
   padding-top: 2em;
 
-  h1 {
-    display: block; //TODO may not need
-  }
-
   h2 {
     margin: .3em 0 0 0;
     padding: 0 0 0.4em 0;
@@ -290,7 +273,7 @@ header {
     }
 
     li {
-      display:inline-block;
+      display: inline-block;
     }
 
     a {
@@ -386,7 +369,7 @@ NAVIGATION
   ul {
     display: inline-block;
 
-    // handle grey line no selection
+    // handle gray line no selection
     &.none li {
       &:before,
       &:after {
@@ -498,24 +481,6 @@ NAVIGATION
   }
 }
 
-.sub-index {
-  margin: 0 auto;
-  width: 90%;
-
-  h2 {
-    padding-top: 0.85em;
-    padding-bottom: 0.5em;
-    font-weight: 800;
-  }
-  ul {
-    padding-top: 1em;
-  }
-  li {
-    padding-bottom: 0.25em;
-    line-height: 1.25;
-  }
-}
-
 
 
 /************************************************
@@ -534,11 +499,6 @@ CONTENT - GENERAL
     padding-bottom: 0.75em;
   }
 
-
-  // section {
-  //   display:none;
-  // }
-
   a:hover {
     .tint:before {
       opacity: .2;
@@ -550,7 +510,7 @@ CONTENT - GENERAL
   }
 
   img {
-    width: 100%; /* fix for ie */
+    width: 100%;
   }
 
   .tint {
@@ -581,11 +541,9 @@ CONTENT - GENERAL
 CONTENT - PLAYGROUND
 ************************************************/
 #playground {
-
   .text-box {
     padding: 0.35em;
     color: $color-hover;
-    // background: $color-primary;
 
     h3 {
       word-break: normal;
@@ -599,7 +557,6 @@ CONTENT - PLAYGROUND
 
     h4 {
       display:none;
-
     }
 
     p {
@@ -618,7 +575,7 @@ CONTENT - PLAYGROUND
     border-bottom: 0.063em solid $color-secondary;
     margin-bottom: 0.5em;
     width:100%;
-    background:$color-background;
+    background: $color-background;
   }
 
   .grid-item {
@@ -639,91 +596,92 @@ CONTENT - PLAYGROUND
   }
 }
 
-.lightbox {
-  /** Default lightbox to hidden */
+.modal {
   display: none;
-
-  /** Position and style */
   position: fixed;
-  z-index: 999;
+  z-index: 3;
+  padding: 5em 0em;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  text-align: center;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.8);
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
 
-  img {
-    max-width: 90%;
-    height: 40%;
-    width: auto;
-    margin: 0 auto;
-    max-height: 80%;
-    margin-top: 5%;
+  @media screen and (max-width: 35em) {
+    padding: 2em 0em;
   }
 
-  .text-box {
-    display:block;
-    width: 50%;
-    max-width: 30em;
-    margin: 0 auto;
-    color:$color-secondary;
+  .modal-content {
+    position: relative;
+    background-color: $color-background;
+    margin: auto;
+    width: 40em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
 
-    h3 {
-      word-break: normal;
-      padding: 0.5em;
-      font-size: 2em;
-      line-height: 1.25;
-      color:$color-background;
-      text-align:center;
+    padding: 0.5em 1em 0em 1em;
+    color: $color-hover;
+    text-align: center;
+
+    @media screen and (max-width: 35em) {
+      width: 80%;
+      img {
+        max-width: 70%;
+      }
     }
 
-    h4 {
-      font-size: 1.25em;
-    }
-
-    p {
-      padding-top: 0.25em;
-      line-height: 1.5;
+    img {
+      max-width: 45%;
+      margin: 0 auto;
       padding-bottom: 0.5em;
     }
 
-    span {
-      display: none;
-
-      &.link {
-        display:inline-block;
-        color: $color-primary;
-        &:hover {
-          color: $color-hover;
-        }
+    .paragraphs {
+      padding: 0.5em 5em 0em 5em;
+      p {
+        widows: 3;
+        orphans: 3;
+      }
+      @media screen and (max-width: 35em) {
+        padding: 0.5em 0em 0em 0em;
       }
     }
-    @media screen and (max-width:44.5em) {
-      width: 90%;
 
-      h3 {
-        font-size: 1.5em;
-      }
-      h4 {
-        font-size: 1.0em;
-      }
-      p {
-        font-size: 0.75em;
-      }
+    .created,
+    .updated {
+      display: none;
+    }
+
+    .close {
+      color: $color-primary;
+      float: right;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: $color-hover;
+      text-decoration: none;
+      cursor: pointer;
     }
   }
+
+  @-webkit-keyframes animatetop {
+    from {top:-19em; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  @keyframes animatetop {
+    from {top:-19em; opacity:0}
+    to {top:0; opacity:1}
+  }
 }
-
-.lightbox:target {
-  /** Remove default browser outline */
-  outline: none;
-
-  /** Unhide lightbox **/
-  display: block;
-}
-
-
 
 /************************************************
 CONTENT - DOCUMENTS

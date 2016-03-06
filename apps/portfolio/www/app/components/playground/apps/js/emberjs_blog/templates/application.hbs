@@ -1,0 +1,17 @@
+<!-- default master page (will be called before all other routes) -->
+<!-- html which will be redirected by the router.js -->
+<div class="container">
+  <nav class="navbar navbar-default" role="navigation">
+    <ul class="nav navbar-nav">
+      <!-- handlebar expressions -->
+      <!-- the helpers are used to link from one route to another -->
+      <li>{{#link-to 'posts'}}Posts{{/link-to}}</li>
+      <li>{{#link-to 'recent-comments'}}Recent Comments{{/link-to}}</li>
+      <li>{{#link-to 'about'}}About{{/link-to}}</li>
+      <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
+
+    </ul>
+  </nav>
+
+  {{outlet}}
+</div>

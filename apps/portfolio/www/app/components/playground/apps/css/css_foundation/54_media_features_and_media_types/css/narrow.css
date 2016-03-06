@@ -1,0 +1,15 @@
+
+body {
+	font: 1.1em/1.5 sans-serif;
+	background: #4682B4;
+}
+.wrap {
+	width: 85%;
+	margin: auto;
+}
+h1 {
+	font-size: 3em;
+}
+p {
+	margin-bottom: 1.5em;
+}

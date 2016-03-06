@@ -30,6 +30,12 @@ RewriteRule ^improve/$ apps/improve/www/index.php
 RewriteRule ^complete/$ apps/complete/www/index.php
 RewriteRule ^strengthen/$ apps/strengthen/www/index.php
 RewriteRule ^portfolio/$ apps/portfolio/www/index.php
+# ETODO: remove
+RewriteRule ^test/$ apps/test/index.php
+RewriteRule ^test/playground/$ apps/test/index.php
+
+RewriteRule ^portfolio/html/website_minimalist_portfolio/$ apps/portfolio/www/app/components/playground/apps/html/website_minimalist_portfolio/index.html
+
 
 # improve api
 RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$2.php

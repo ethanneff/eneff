@@ -1,0 +1,43 @@
+<!-- Content Slider -->
+<div class="row">
+  <div class="medium-12 column" data-orbit> 
+    <div>
+      <h1>Build a self-destructing message app</h1>
+      <p class="lead">Learn how to build this fun little app by signing up for a Treehouse account today.</p>
+      <p class="button-group radius">
+        <a class="medium button success" href="#">Download the app</a>
+        <a class="medium button hide-for-small" data-reveal-id="formModal">Text me the link</a>
+      </p> 
+    </div>
+    <div>
+      <h1>Learn how to build it for iOS</h1>
+      <p class="lead">We'll teach you how to build it from scratch!</p>
+      <p><a class="medium button radius" href="#">Get started today!</a>   
+    </div>
+    <div>
+      <h1>Learn how to build it for Android</h1>
+      <p class="lead">We'll teach you how to build it from scratch!</p>
+      <p><a class="medium button radius" href="#">Get started today!</a></p> 
+    </div>
+  </div>
+</div><!-- End Content Slider -->
+
+<!-- Form Modal -->
+<div id="formModal" class="reveal-modal small" data-reveal>
+  <h3>We'll Text You the Link!</h3>
+  <form class="custom">
+    <fieldset>
+      <input type="tel" placeholder="Mobile Phone">
+      <select>
+        <option>iOS</option>
+        <option>Android</option>
+      </select>             
+      <button type="submit" class="small button">Text me!</button>
+    </fieldset>
+  </form>
+  <a href="#" class="close-reveal-modal">&#215;</a>
+</div><!-- End Form Modal -->
+
+<script>
+  $(document).foundation();
+</script> 

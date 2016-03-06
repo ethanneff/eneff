@@ -1,0 +1,16 @@
+
+body {
+	background: #FF6347;
+	color: #FFF;
+	font: 1.1em/1.5 sans-serif;
+}
+.wrap {
+	margin: auto;
+	width: 85%;
+}
+h1 {
+	font-size: 3em;
+}
+p {
+	margin-bottom: 1.5em;
+}

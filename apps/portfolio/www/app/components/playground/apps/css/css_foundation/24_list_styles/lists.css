@@ -1,0 +1,26 @@
+
+/* List Styles
+--------------------------------------------- */
+
+ul, ol {
+	list-style-position: inside;
+	margin-left: 0;
+	padding-left: 0;
+}	
+
+ul {
+	list-style-type: none;
+}
+
+ul li {
+	background: url('marker.png') no-repeat 0 2px;
+	padding-left: 35px;
+}
+
+ol {
+	list-style: decimal-leading-zero outside;
+}
+
+li {
+	margin-bottom: 1.2em;
+}

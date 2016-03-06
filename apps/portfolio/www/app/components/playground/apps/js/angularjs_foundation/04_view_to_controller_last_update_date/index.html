@@ -1,0 +1,39 @@
+<html ng-app="treehouseCourse">
+  <head>
+    <style type="text/css">
+      .main, .debug {
+        width: 48%;
+      }
+
+      .main {
+        float: left;
+      }
+
+      .debug {
+        float: right;
+      }
+
+      textarea {
+        display:block;
+      }
+    </style>
+  </head>
+  <body ng-controller="stageCtrl">
+    <div class="main">
+      <form class="fields">
+        <label>
+          Message:
+          <!-- connect textarea to backend model message.text -->
+          <textarea ng-model="message.text"></textarea>
+        </label>
+      </form>
+    </div>
+    <div class="debug">
+      <pre ng-bind="message | json">
+      </pre>
+    </div>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

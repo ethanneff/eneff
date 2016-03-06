@@ -1,5 +1,9 @@
 <?php
 include_once(dirname(dirname(dirname(__FILE__))) . "/shared/inc/config.php");
+
+$datetime1 = new DateTime();
+$datetime2 = new DateTime('1990-11-19');
+$interval = $datetime1->diff($datetime2);
 ?>
 
 <section class="group" id="about">
@@ -12,7 +16,7 @@ include_once(dirname(dirname(dirname(__FILE__))) . "/shared/inc/config.php");
       </a>
       <div class="text-box">
         <h3>Hi. I'm Ethan Neff!</h3>
-        <p>I am a 23 year old graduate from the University of Texas at Austin with a BBA in Management Information Systems and a minor in Computer Science.</p>
+        <p>I am a <?php echo $interval->format('%y'); ?> year old graduate from the University of Texas at Austin with a BBA in Management Information Systems and a minor in Computer Science.</p>
         <p>This website is my development playground - where I will document, showcase, provide status updates, and play around with all things new happening on the web.</p>
         <p>As of right now, the site is not much as it is only a couple weeks old, but I have big plans for it so it will evolve and become better with time.</p>
       </div>

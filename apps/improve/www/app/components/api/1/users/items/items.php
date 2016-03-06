@@ -10,7 +10,7 @@ Api::authenticate();
 
 // params
 $output = false;
-$data["user_id"] = Api::get_url_id("users");
+$data["user_id"] = (Api::get_url_id("users") === 0) ? Api::response($output) : Api::get_url_id("users");
 $data["item_id"] = (isset($_GET["id"])) ? Validate::int($_GET["id"]) : false;
 
 if (strtoupper($_SERVER["REQUEST_METHOD"]) === "GET") {
@@ -18,7 +18,8 @@ if (strtoupper($_SERVER["REQUEST_METHOD"]) === "GET") {
   $data["type_id"] = (isset($_GET["type_id"])) ? Validate::int($_GET["type_id"]) : false;
   $data["is_example"] = (isset($_GET["is_example"])) ? Validate::bool($_GET["is_example"]) : false;
   $data["is_active"] = (isset($_GET["is_active"])) ? Validate::bool($_GET["is_active"]) : false;
-  $data["days"] = (isset($_GET["days"])) ? Validate::int($_GET["days"]) : 30;
+  $data["tracking"] = (isset($_GET["tracking"])) ? Validate::int($_GET["tracking"]) : 30;
+  $data["is_app"] = (isset($_GET["is_app"])) ? Validate::bool($_GET["is_app"]) : false;
 }
 if (strtoupper($_SERVER["REQUEST_METHOD"]) === "POST" || strtoupper($_SERVER["REQUEST_METHOD"]) === "PUT") {
   $data["type_id"] = (isset($_POST["type_id"])) ? Validate::int($_POST["type_id"]) : false;

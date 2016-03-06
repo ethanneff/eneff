@@ -1,0 +1,24 @@
+
+.box {
+/*	background-color: #E4E4E4;
+	background-image: url('img/mike.png');
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;*/
+
+	/* Shorthand Property */
+
+	background: #E4E4E4 url('img/mike.png') no-repeat center;
+}
+
+.scroll {
+	background-attachment: scroll; /* This is the default value */
+}
+
+.fixed {
+	background-attachment: fixed;
+}
+
+.local {
+	background-attachment: local;
+}

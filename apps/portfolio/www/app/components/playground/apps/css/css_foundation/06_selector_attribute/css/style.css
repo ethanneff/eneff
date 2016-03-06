@@ -1,0 +1,41 @@
+body {
+	padding: 2% 18%;
+	font: 1em/1.5 sans-serif;
+}
+form {
+	margin-top: 30px;
+}
+
+/* Attribute Selectors */
+[class] {
+	background-color: crimson;
+}
+
+a[class] {
+	color: orange;
+}
+
+a[class="foo"] {
+	font-size: 25px;
+}
+
+input[type="email"] {
+	width: 200px;
+	height: 25px;
+	border: 2px solid grey;
+	background-color: lightyellow;
+}
+
+input[type="submit"] {
+	margin-left:  5px;
+	width: 100px;
+	height: 30px;
+	border: none;
+	background-color: steelblue;
+	color: white;
+}
+
+a[target="_blank"] {
+	text-decoration: none;
+	border-bottom: 2px dotted crimson;
+}

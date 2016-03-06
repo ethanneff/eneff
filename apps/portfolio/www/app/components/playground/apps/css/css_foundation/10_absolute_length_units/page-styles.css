@@ -1,0 +1,58 @@
+ /* Page Styles
+ --------------------------------------------- */
+
+body {
+  margin: 0 auto;
+  padding: 2em 0;
+  width: 800px;
+  background: #000;
+  color: #FFF;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 2px dotted #a3a3a3;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+  margin: 15px 0;
+  padding: 15px;
+  width: 150px;
+  color: #000;
+  text-shadow: 0 1px 1px rgba(255,255,255,.6);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.px {
+  background-color: #d93d37;
+}
+
+.cm {
+  background-color: #e2e2e2;
+}
+
+.mm {
+  background-color: #467f77;
+}
+
+.in {
+  background-color: #45c3ae;
+}
+
+.pc {
+  background-color: #fff6ad;
+}
+
+.pt {
+  background-color: #e0cd95;
+}
+
+
+
+

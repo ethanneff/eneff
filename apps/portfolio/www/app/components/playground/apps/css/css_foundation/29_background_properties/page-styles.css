@@ -1,0 +1,27 @@
+
+body {
+	padding-bottom: 100px;
+	background: #2A2A2A;
+	color: #FFF;
+	text-shadow: 0 1px #000;
+	font: 1.1em/1.5 sans-serif;
+}
+h2 {
+	margin: 0;
+	font-size: 2em;
+}
+.box, .attch {
+	box-sizing: border-box;
+	margin: 40px auto;
+	padding: 20px;
+	width: 800px;
+	height: 500px;
+}
+.scroll, .fixed, .local {
+	overflow: auto;
+	height: 400px;
+	background-image: url('img/rain.jpg');
+	background-repeat: no-repeat;
+}
+
+

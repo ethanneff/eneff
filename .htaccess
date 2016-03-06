@@ -22,7 +22,7 @@ RewriteRule ^(.*)([^/])$ http://%{HTTP_HOST}/$1$2/ [L,R=301]
 ErrorDocument 400 /apps/portfolio/www/app/shared/errors/400.php
 ErrorDocument 401 /apps/portfolio/www/app/shared/errors/401.php
 ErrorDocument 403 /apps/portfolio/www/app/shared/errors/403.php
-# ErrorDocument 404 /apps/portfolio/www/app/shared/errors/404.php
+ErrorDocument 404 /apps/portfolio/www/app/shared/errors/404.php
 ErrorDocument 500 /apps/portfolio/www/app/shared/errors/500.php
 
 # redirect
@@ -31,11 +31,8 @@ RewriteRule ^complete/$ apps/complete/www/index.php
 RewriteRule ^strengthen/$ apps/strengthen/www/index.php
 RewriteRule ^portfolio/$ apps/portfolio/www/index.php
 # ETODO: remove
-RewriteRule ^test/$ apps/test/index.php
-RewriteRule ^test/playground/$ apps/test/index.php
-
-RewriteRule ^portfolio/html/website_minimalist_portfolio/$ apps/portfolio/www/app/components/playground/apps/html/website_minimalist_portfolio/index.html
-
+RewriteRule ^test/$ apps/test/www/index.php
+RewriteRule ^test/playground/$ apps/test/www/index.php
 
 # improve api
 RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$2.php

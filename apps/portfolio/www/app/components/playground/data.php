@@ -310,7 +310,7 @@ $data = array(
     'paragraphs' => [
     'Uses GeoLocation to get the current location of the user to pull data from forecast.io.',
     'Leverages the TableView - DisplayView model to view the weekly and daily weather forecast.',
-    'A demo of the app can be found <a title="link" href="//youtu.be/hd2ghV8DORQ">here</a>.', // ETODO: upload to youtube
+    'A demo of the app can be found <a title="link" href="//youtu.be/hZWQUUMjBUY">here</a>.',
     ],
     ),
   array(

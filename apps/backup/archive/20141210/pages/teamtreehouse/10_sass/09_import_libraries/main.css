@@ -1,6 +1,0 @@
-body {
-  background-color: red;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, red), color-stop(100%, orange));
-  background-image: -webkit-linear-gradient(bottom, red, orange);
-  background-image: linear-gradient(to top,red, orange);
-  font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif; }

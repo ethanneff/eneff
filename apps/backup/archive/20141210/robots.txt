@@ -1,3 +1,0 @@
-# robots.txt for eneff.com
-
-User-agent: *

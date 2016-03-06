@@ -33,8 +33,8 @@ $data = array(
     ),
   array(
     'title' => 'Swipe TableViewCell',
-    'image' => 'ios_TableView_swipe.png',
-    'modal' => 'ios_TableView_swipe',
+    'image' => 'ios_tableview_swipe.png',
+    'modal' => 'ios_tableview_swipe',
     'tags' => ['Mobile', 'Module', 'Swift'],
     'created' => '2016.01.29',
     'updated' => '2014.02.03',
@@ -129,8 +129,8 @@ $data = array(
     ),
   array(
     'title' => 'TableView Pull-down to Search',
-    'image' => 'ios_TableView_search.png',
-    'modal' => 'ios_TableView_search',
+    'image' => 'ios_tableview_search.png',
+    'modal' => 'ios_tableview_search',
     'tags' => ['Mobile', 'Module', 'Objective-C'],
     'created' => '2014.09.15',
     'updated' => '2014.09.15',

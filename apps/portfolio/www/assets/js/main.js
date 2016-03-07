@@ -178,21 +178,24 @@
     function loadPlayground() {
       logger.log('app.loadPlayground');
       renderContent("playground", dir + "playground/index.php", function(local) {
+        var section = cache.$playground;
         if (local) {
-          renderMason();
+          mason.load(section);
         } else {
-          imagesLoaded();
+          mason.init(section);
         }
-        modals.init();
       });
-
       renderNav("nav-playground");
     }
 
     function loadDocuments() {
       logger.log('app.loadDocuments');
       renderContent("documents", dir + "documents/index.php", function(local) {
-        renderAccordion();
+        if (local) {
+          accordion.load();
+        } else {
+          accordion.init(cache);
+        }
       });
       renderNav("nav-documents");
     }
@@ -200,7 +203,7 @@
     function loadAbout() {
       logger.log('app.loadAbout');
       renderContent("about", dir + "about/index.php", function(local) {
-        modals.init();
+
       });
       renderNav("nav-about");
     }
@@ -220,39 +223,18 @@
       if (cache.hasOwnProperty("$"+page)) {
         logger.log('app.renderContent.local');
         $content.html(cache["$"+page]);
+        modals.init();
         callback(1);
       } else {
         logger.log('app.renderContent.download');
         $content.load(url, function(data) {
           cache["$"+page] = $("#"+page);
+          modals.init();
           callback(0);
         });
       }
     }
 
-    function imagesLoaded() {
-      logger.log('app.imagesLoaded');
-      cache.$playground.imagesLoaded()
-      .progress(renderMason);
-    }
-
-    function renderMason() {
-      logger.log('app.renderMason');
-      cache.$playground.children().each(function() {
-        if ($(this).hasClass("grid")) {
-          $(this).masonry();
-        }
-      });
-    }
-
-    function renderAccordion() {
-      logger.log('app.renderAccordion');
-      $('.nested-accordion').find('.comment').slideUp();
-      $('.nested-accordion').find('h3').click(function(){
-        $(this).next('.comment').slideToggle(100);
-        $(this).toggleClass('selected');
-      });
-    }
 
     // public
     return {
@@ -271,6 +253,73 @@
       log: log
     }
   })();
+
+  var mason = (function () {
+    function init(section) {
+      logger.log('mason.init');
+      // listener for images loaded
+      section.imagesLoaded().progress(function() {
+        load(section);
+      });
+    }
+
+    function load(section) {
+      logger.log('mason.load');
+      // reorder grid
+      section.children().each(function() {
+        if ($(this).hasClass("grid")) {
+          $(this).masonry();
+        }
+      });
+    }
+
+    return {
+      init: init,
+      load: load,
+    }
+  })();
+
+  var accordion = (function() {
+    var nested = [];
+    var titles = [];
+    var comments = [];
+
+    function init(cache) {
+      logger.log('app.initAccordion');
+      // cache
+      nested = cache.$documents.find('.nested-accordion');
+      titles = cache.$documents.find('h3');
+      comments = cache.$documents.find('.comment');
+      // slide up
+      comments.each(function() {
+        $(this).slideUp(0);
+      });
+      // regular page load
+      load();
+    }
+
+    function load() {
+      logger.log('app.renderAccordion');
+      // page load
+      listen();
+    }
+
+    function listen() {
+      // add listeners for button press
+      titles.each(function() {
+        $(this).click(function(){
+          $(this).next('.comment').slideToggle(200);
+          $(this).toggleClass('selected');
+        });
+      });
+    }
+
+    return {
+      init: init,
+      load: load,
+    }
+  })();
+
 })();
 
 

@@ -10,6 +10,7 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,QSA,NC,L]
 
+# ETODO: before prod
 # force https
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

@@ -28,7 +28,7 @@ $interval = $datetime1->diff($datetime2);
       </div>
       <a href="#" data-modal="resume">
         <figure class="tint">
-          <img src="<?php echo BASE_URL; ?>assets/img/about/ethan_neff_resume.png" alt="resume of ethan neff">
+          <img src="<?php echo BASE_URL; ?>assets/img/about/ethan_neff_resume_graphic.png" alt="resume of ethan neff">
         </figure>
       </a>
     </li>
@@ -49,7 +49,7 @@ $interval = $datetime1->diff($datetime2);
     <div class="modal-content">
       <span class="close">×</span>
       <h3>Resume</h3>
-      <img src="<?php echo BASE_URL; ?>assets/img/about/ethan_neff_resume.png" alt="resume of ethan neff">
+      <img src="<?php echo BASE_URL; ?>assets/img/about/ethan_neff_resume_graphic.png" alt="resume of ethan neff">
     </div>
   </div>
 </section>

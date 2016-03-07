@@ -198,7 +198,7 @@ include_once(dirname(dirname(dirname(__FILE__))) . "/shared/inc/config.php");
         <h3>Improvement</h3>
         <div class='comment'>
           <div class='nested-accordion'>
-            <h3>The Secret Weapon - Tony Alessandra</span></h3>
+            <h3>The Secret Weapon - Braintoniq</span></h3>
             <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT82GVSB5ahDO49WUl3Zgw8pZGGJvzESpqk">here</a> to view the document.</div>
           </div>
           <div class='nested-accordion'>
@@ -239,11 +239,11 @@ include_once(dirname(dirname(dirname(__FILE__))) . "/shared/inc/config.php");
             <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT92dOBR5Z9AcJXLBpvLFhZwq15Hc-C5JHk">here</a> to view the document.</div>
           </div>
           <div class='nested-accordion'>
-            <h3>Business Models</h3>
+            <h3>Business Models - College</h3>
             <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT9lkGuAPMZKCLydRuVXVnBwvO8DhnGx_as">here</a> to view the document.</div>
           </div>
           <div class='nested-accordion'>
-            <h3>Personal Branding</h3>
+            <h3>Personal Branding - National Instruments</h3>
             <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT-wrAxb1HVA97SDJVkn3jQiibJl00z2HCQ">here</a> to view the document.</div>
           </div>
           <div class='nested-accordion'>

@@ -4,7 +4,7 @@ include_once(dirname(dirname(dirname(__FILE__))) . "/shared/inc/config.php");
 
 <section class="group" id="documents">
   <div class='nested-accordion'>
-    <h3>Languages</h3>
+    <h3>Software</h3>
     <div class='comment'>
       Helpful notes, shortcuts, and best practices of many computer langauges and software I use frequently.
       <div class='nested-accordion'>
@@ -68,7 +68,6 @@ include_once(dirname(dirname(dirname(__FILE__))) . "/shared/inc/config.php");
       <div class='nested-accordion'>
         <h3>Mobile</h3>
         <div class='comment'>
-
           <div class='nested-accordion'>
             <h3>Ionic</h3>
             <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT-5V9iI4x1EM7epog5fBkvrdB4bJcIsSQA">here</a> to view the document.</div>
@@ -186,6 +185,78 @@ include_once(dirname(dirname(dirname(__FILE__))) . "/shared/inc/config.php");
           <div class='nested-accordion'>
             <h3>Web Development</h3>
             <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT8d-G38xrBNe434h13Tk4BdXvEfHhpqFcU">here</a> to view the document.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='nested-accordion'>
+    <h3>Readings</h3>
+    <div class='comment'>
+      Notes I have taken from different books, articles, videos, and lectures.
+      <div class='nested-accordion'>
+        <h3>Improvement</h3>
+        <div class='comment'>
+          <div class='nested-accordion'>
+            <h3>The Secret Weapon - Tony Alessandra</span></h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT82GVSB5ahDO49WUl3Zgw8pZGGJvzESpqk">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>The 10 Qualities Of Charismatic People - Tony Alessandra</span></h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT8HSak55chEJKKrgsV3voTfsELe72gbQcY">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>7 Habits of Highly Effective People - Stephen R. Covey</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT-UKmuTwVFDlIhxyGpzqZ89yhw3N4IZ1JA">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>Eat That Frog! - Brain Tracy</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT9v0FwzAlVEZ5RZjeePjFQ4uG451pG6UN8">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>Getting Things Done - David Allen</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT8qaH-tOG5GmLnpYFIkPyw-M48hSbDn0dc">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>How to Win Friends and Influence People - Dale Carnegie</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT8n6Z_tu9xLaaurq9mNiSLLa7hpvj2bt5U">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>How Great Leaders Inspire Action - Simon Sinek</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT-pRiHdELBOxLy2JZMOpwrQeuHh7nUN97k">here</a> to view the document.</div>
+          </div>
+        </div>
+      </div>
+      <div class='nested-accordion'>
+        <h3>Business</h3>
+        <div class='comment'>
+          <div class='nested-accordion'>
+            <h3>One Minute Manager - Kenneth H. Blanchard</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT_7RP2UYf1FrbgnH30SkrrZFU5hU2tvoF0">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>The First 90 Days - Michael Watkins</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT92dOBR5Z9AcJXLBpvLFhZwq15Hc-C5JHk">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>Business Models</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT9lkGuAPMZKCLydRuVXVnBwvO8DhnGx_as">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>Personal Branding</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT-wrAxb1HVA97SDJVkn3jQiibJl00z2HCQ">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>Business Plan - Team Treehouse</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT_jyUNmZ4hD-6SbOotqTHNTSKYqcy8ZVik">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>Career Foundations - Team Treehouse</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT_RVMISXgxE8rdxzH7aMTzmuOSMKtX8h4g">here</a> to view the document.</div>
+          </div>
+          <div class='nested-accordion'>
+            <h3>Measuring Performance - Team Treehouse</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT-lFHq81HBAio7GfH2gTgFOhnQlbgQV70s">here</a> to view the document.</div>
           </div>
         </div>
       </div>

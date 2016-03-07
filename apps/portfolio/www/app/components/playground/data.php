@@ -832,26 +832,24 @@ for ($i=0; $i < count($data) ; $i++) {
 </div>';
 $grids .= $grid;
 $modal = '
-<div class="modals">
-    <div class="modal" data-modal="' . $item["modal"] . '">
-      <div class="modal-content">
-        <span class="close">×</span>
-        <h3>' . $item["title"] . '</h3>
-        <img src="' . $base_img . $item["image"] . '" alt="image of the ' . $item["title"] . '">';
-        for ($j=0; $j < count($item["tags"]); $j++) {
-          $tag = $item["tags"][$j];
-          $modal .= '<h4>' . $tag . '</h4>';
-      }
-      $modal .= '
-      <span class="created">' . $item["created"] .'</span>
-      <span class="updated">' . $item["updated"] .'</span>
-      <div class="paragraphs">';
-          for ($k=0; $k < count($item["paragraphs"]); $k++) {
-            $paragraph = $item["paragraphs"][$k];
-            $modal .= '<p>' . $paragraph . '</p>';
-        }
-        $modal .= '
-    </div>
+<div class="modal" data-modal="' . $item["modal"] . '">
+  <div class="modal-content">
+    <h3>' . $item["title"] . '</h3>
+    <span class="close">×</span>
+    <img src="' . $base_img . $item["image"] . '" alt="image of the ' . $item["title"] . '">';
+    for ($j=0; $j < count($item["tags"]); $j++) {
+      $tag = $item["tags"][$j];
+      $modal .= '<h4>' . $tag . '</h4>';
+  }
+  $modal .= '
+  <span class="created">' . $item["created"] .'</span>
+  <span class="updated">' . $item["updated"] .'</span>
+  <div class="paragraphs">';
+      for ($k=0; $k < count($item["paragraphs"]); $k++) {
+        $paragraph = $item["paragraphs"][$k];
+        $modal .= '<p>' . $paragraph . '</p>';
+    }
+    $modal .= '
 </div>
 </div>
 </div>';

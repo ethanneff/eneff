@@ -13,14 +13,14 @@
     });
 
     $(document).ready(function() {
-      console.debug("router.load");
+      logger.log("router.load");
       // handle page load
       route(window.location.hash);
     });
 
     // methods
     function route(hash) {
-      console.debug("router.route", hash);
+      logger.log("router.route", hash);
       // pages
       if (hash.indexOf("#/playground") === 0 || hash === "" || hash === "#/" || hash.indexOf("#/?") === 0 ) {
         app.loadPlayground();
@@ -42,7 +42,7 @@
   var url = (function() {
     // methods
     function addParameter(param, value, url) {
-      console.debug("url.addParameter");
+      logger.log("url.addParameter");
       if (!url) url = window.location.hash;
       var val = new RegExp('(\\?|\\&)' + param + '=.*?(?=(&|$))');
       var qstring = /\?.+$/;
@@ -57,7 +57,7 @@
     }
 
     function getParameter(name, url) {
-      console.debug("url.getParameter");
+      logger.log("url.getParameter");
       if (!url) url = window.location.href;
       name = name.replace(/[\[\]]/g, "\\$&");
       var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
@@ -68,7 +68,7 @@
     }
 
     function removeParameter(parameter, url) {
-      console.debug("url.removeParameter");
+      logger.log("url.removeParameter");
       if (!url) url = window.location.href;
       var urlparts = url.split('?');
       if (urlparts.length >= 2) {
@@ -109,12 +109,13 @@
 
     // methods
     function init() {
-      console.debug('modals.init');
+      logger.log('modals.init');
       $modals = $(".modal");
 
       // listen for modal loads
       $("a[data-modal]").on("click", function(e) {
         var queryString = url.addParameter("modal", $(this).data("modal"));
+        // bypass the hash change
         if (queryString.indexOf("#/") !== 0) queryString = "#/" + queryString;
         // update the query string to change pages/modals
         e.originalEvent.currentTarget.href = queryString;
@@ -134,7 +135,7 @@
     }
 
     function load(id) {
-      console.debug('modals.load');
+      logger.log('modals.load');
       if (!id) id = url.getParameter("modal");
       if (id !== null && typeof $modals !== "undefined") {
         $modals.each(function() {
@@ -147,7 +148,7 @@
     }
 
     function close() {
-      console.debug('modals.close');
+      logger.log('modals.close');
       $modal.css("display", "none");
       location.href = url.removeParameter("modal");
     }
@@ -175,7 +176,7 @@
 
     // load pages
     function loadPlayground() {
-      console.debug('app.loadPlayground');
+      logger.log('app.loadPlayground');
       renderContent("playground", dir + "playground/index.php", function(local) {
         if (local) {
           renderMason();
@@ -189,7 +190,7 @@
     }
 
     function loadDocuments() {
-      console.debug('app.loadDocuments');
+      logger.log('app.loadDocuments');
       renderContent("documents", dir + "documents/index.php", function(local) {
         renderAccordion();
       });
@@ -197,16 +198,16 @@
     }
 
     function loadAbout() {
-      console.debug('app.loadAbout');
+      logger.log('app.loadAbout');
       renderContent("about", dir + "about/index.php", function(local) {
-
+        modals.init();
       });
       renderNav("nav-about");
     }
 
     // update DOM
     function renderNav(element) {
-      console.debug('app.renderNav');
+      logger.log('app.renderNav');
       (element) ? $navContaner.removeClass("none") : $navContaner.removeClass("none");
 
       $navItems.each(function() {
@@ -215,13 +216,13 @@
     }
 
     function renderContent(page, url, callback) {
-      console.debug('app.renderContent');
+      logger.log('app.renderContent');
       if (cache.hasOwnProperty("$"+page)) {
-        console.debug('app.renderContent.local');
+        logger.log('app.renderContent.local');
         $content.html(cache["$"+page]);
         callback(1);
       } else {
-        console.debug('app.renderContent.download');
+        logger.log('app.renderContent.download');
         $content.load(url, function(data) {
           cache["$"+page] = $("#"+page);
           callback(0);
@@ -230,13 +231,13 @@
     }
 
     function imagesLoaded() {
-      console.debug('app.imagesLoaded');
+      logger.log('app.imagesLoaded');
       cache.$playground.imagesLoaded()
       .progress(renderMason);
     }
 
     function renderMason() {
-      console.debug('app.renderMason');
+      logger.log('app.renderMason');
       cache.$playground.children().each(function() {
         if ($(this).hasClass("grid")) {
           $(this).masonry();
@@ -245,7 +246,7 @@
     }
 
     function renderAccordion() {
-      console.debug('app.renderAccordion');
+      logger.log('app.renderAccordion');
       $('.nested-accordion').find('.comment').slideUp();
       $('.nested-accordion').find('h3').click(function(){
         $(this).next('.comment').slideToggle(100);
@@ -260,4 +261,32 @@
       loadAbout: loadAbout
     }
   })();
+
+  var logger = (function(blah) {
+    var prod = false
+    function log(msg) {
+      if (!prod) console.log(msg);
+    }
+    return {
+      log: log
+    }
+  })();
 })();
+
+
+(function verticalRhythm(pixels) {
+  if (!pixels) var pixels = 24;
+
+  var body = document.body;
+  var html = document.documentElement;
+  var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+  for (var i = 0; i < height / pixels; i++) {
+    var div = document.createElement('div');
+    div.style.position = "absolute";
+    div.style.width = "100%";
+    div.style.borderTop = "1px dashed black";
+    div.style.marginTop = i * pixels + "px";
+    body.parentNode.insertBefore(div, body);
+  }
+})(-1)

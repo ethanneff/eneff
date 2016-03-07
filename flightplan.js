@@ -17,6 +17,6 @@ plan.target('prod', [
 // run commands on localhost
 plan.local(function(local) {
   local.log('Copy files to remote hosts');
-  var filesToCopy = local.exec('git ls-files', {silent: false});
+  var filesToCopy = local.exec('git ls-files', {silent: true});
   local.transfer(filesToCopy, 'www');
 });

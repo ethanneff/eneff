@@ -16,9 +16,8 @@ include(dirname(dirname(__FILE__)) . "/inc/config.php");
   <meta name="author" content="Ethan Neff">
   <!-- StyleSheets -->
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
-  <!-- ETODO: min and change to min -->
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,500,700">
-  <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style.min.css">
   <!-- FavIcons -->
   <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/img/favicon.ico">
   <link rel="apple-touch-icon" href="touch-icon-iphone.png">

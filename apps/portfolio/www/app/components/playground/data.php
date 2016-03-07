@@ -727,7 +727,7 @@ $data = array(
     ),
   array(
     'title' => 'Bootstrap App Advertisement',
-    'image' => 'html_website_bootstrap_app_ad.jpg',
+    'image' => 'html_website_foundation_app_ad.jpg',
     'modal' => 'html_website_bootstrap_app_ad',
     'tags' => ['Front-end', 'Training', 'Bootstrap'],
     'created' => '2015.01.12',

@@ -3,9 +3,12 @@
 // these two constants are used to create root-relative web addresses
 // and absolute server paths throughout all the code
 
-define("BASE_URL","/playground/php/php_shirts_4_mike/");
-define("ROOT_PATH",$_SERVER["DOCUMENT_ROOT"] . "/playground/php/php_shirts_4_mike/");
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
+define("BASE_URL", "/apps/portfolio/www/app/components/playground/apps/php/php_shirts_4_mike/");
+define("ROOT_PATH", $_SERVER["DOCUMENT_ROOT"] . "/apps/portfolio/www/app/components/playground/apps/php/php_shirts_4_mike/");
 
 define("DB_HOST","localhost");
 define("DB_NAME","enefjzpu_shirts4mike");

@@ -17,7 +17,7 @@
   // such as ng-repeat to fill the view with data
   // such as functions to add reviews on click
 
-  // 'store contorller' to handle each product
+  // 'store controller' to handle each product
   app.controller('StoreController', function() {
     this.products = gems;
   });

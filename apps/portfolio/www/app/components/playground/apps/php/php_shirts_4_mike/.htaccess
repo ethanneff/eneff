@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /playground/php/php_shirts_4_mike/
+RewriteBase /apps/portfolio/www/app/components/playground/apps/php/php_shirts_4_mike/
 
 # redirect .php files to subdirectories
 RewriteRule ^shirts/$ shirts/shirts.php

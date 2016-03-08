@@ -55,7 +55,8 @@
     <li><a href="52_css_animation_project_2/"> 52_css_animation_project_2</a></li>
     <li><a href="53_css_animation_project_3/"> 53_css_animation_project_3</a></li>
     <li><a href="54_media_features_and_media_types/"> 54_media_features_and_media_types</a></li>
-    <li><a href="55_adaptive_layouts_with_media_queries/"> 55_adaptive_layouts_with_media_queries</a></li>
+    <li><a href="55_adaptive_layouts_with_media_queries/fluid_with_media"> 55.1_adaptive_layouts_with_media_queries</a></li>
+    <li><a href="55_adaptive_layouts_with_media_queries/fluid_without_media"> 55.2_adaptive_layouts_without_media_queries</a></li>
     <li><a href="56_device_media_queries_pt_1/"> 56_device_media_queries_pt_1</a></li>
     <li><a href="57_device_media_queries_pt_2/"> 57_device_media_queries_pt_2</a></li>
     <li><a href="58_print_style_sheets/"> 58_print_style_sheets</a></li>

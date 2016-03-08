@@ -1,17 +1,10 @@
 <?php
 
-function curl($url) {
-  $ch = curl_init();
-  curl_setopt($ch, CURLOPT_URL, $url);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-  $data = curl_exec($ch);
-  curl_close($ch);
-  return $data;
-}
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-$scraped_website = curl("https://www.evernote.com/shard/s319/sh/5f357f2c-0313-47e0-b8aa-f1d74a56afb3/b7698a97e3104e9f");
-
-?>
+ ?>
 
 <!DOCTYPE html>
 <html>
@@ -19,14 +12,17 @@ $scraped_website = curl("https://www.evernote.com/shard/s319/sh/5f357f2c-0313-47
   <title></title>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/github.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-  <script src="/apps/test/www/jquery.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+  <style type="text/css" media="screen">
+    strong {
+      color: purple;
+    }
+  </style>
 </head>
 <body>
-
 <pre><code class="php">// class example
 class MyClass {
-  $prop0 = 'internal property';
+  private $prop0 = 'internal property';
   public $prop1 = "I'm a class property!";
   public static $count = 0;
 
@@ -62,12 +58,11 @@ class MyClass {
   public static function plusOne() {
     return "The count is " . ++self::$count . ".";
   }
-
 }
 
 // inheritance
 class MyClassSecond extends MyClass {
-  $prop0 = 'internal property';
+  private $prop0 = 'internal property';
   public $prop1 = "I'm a class property!";
 
   public function __construct() {
@@ -102,21 +97,9 @@ echo MyClass::$count
 echo $obj1;
 // __destruct
 unset($obj1);
-</code></pre>
+</code><strong>
+</strong>
 
+</pre>
 </body>
-
-
-<script>
-  // no globals
-  function getHTML() {
-    $.ajax({
-      url: 'https://www.google.com',
-      type: 'GET',
-      success: function(res) {
-        console.log(res.responseText);
-      }
-    });
-  }
-</script>
 </html>

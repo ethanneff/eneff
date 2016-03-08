@@ -1,15 +1,5 @@
-<?php
-require_once("../../inc/config.php");
-$section = "index";
-$pageTitle = "Ethan Neff | Bay Area iOS and Web Developer";
-?>
-
-<?php include(ROOT_PATH . 'inc/header.php'); ?>
 
 <div class="sub-index">
-  <ul>
-    <li><a href="../"> &lt;-- navigate_back</a></li>
-  </ul>
   <h2>JavaScript, jQuery, AJAX</h2>
   <ul>
     <li><a href="ajax_jquery_api_flickr_button/"> ajax_jquery_api_flickr_button</a></li>
@@ -36,9 +26,5 @@ $pageTitle = "Ethan Neff | Bay Area iOS and Web Developer";
     <li><a href="angularjs_basics/"> angularjs_basics</a></li>
     <li><a href="angularjs_gem_store/"> angularjs_gem_store</a></li>
     <li><a href="backbone_polygon_editor/"> backbone_polygon_editor</a></li>
-  </ul>
+</ul>
 </div>
-
-<?php include(ROOT_PATH . 'inc/footer.php'); ?>
-
-

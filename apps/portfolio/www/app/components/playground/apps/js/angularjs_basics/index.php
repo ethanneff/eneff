@@ -1,15 +1,5 @@
-<?php
-require_once("../../../inc/config.php");
-$section = "index";
-$pageTitle = "Ethan Neff | Bay Area iOS and Web Developer";
-?>
-
-<?php include(ROOT_PATH . 'inc/header.php'); ?>
 
 <div class="sub-index">
-	<ul>
-		<li><a href="../"> &lt;-- navigate_back</a></li>
-	</ul>
 	<h2>Angular.js Basics</h2>
 	<ul>
 		<li><a href="01_add_remove_array/"> 01_add_remove_array</a></li>
@@ -26,7 +16,3 @@ $pageTitle = "Ethan Neff | Bay Area iOS and Web Developer";
 		<li><a href="12_multiple_modules/"> 12_multiple_modules</a></li>
 	</ul>
 </div>
-
-<?php include(ROOT_PATH . 'inc/footer.php'); ?>
-
-

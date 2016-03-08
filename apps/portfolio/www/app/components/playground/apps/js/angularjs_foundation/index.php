@@ -1,15 +1,5 @@
-<?php
-require_once("../../../inc/config.php");
-$section = "index";
-$pageTitle = "Ethan Neff | Austin iOS and Web Developer";
-?>
-
-<?php include(ROOT_PATH . 'inc/header.php'); ?>
-
 <div class="sub-index">
-	<ul>
-		<li><a href="../"> &lt;-- navigate_back</a></li>
-	</ul>
+
 	<h2>Angular.js Foundatation</h2>
 	<ul>
 		<li><a href="01_jquery_vs_angular_json/"> 01_jquery_vs_angular_json</a></li>
@@ -24,7 +14,3 @@ $pageTitle = "Ethan Neff | Austin iOS and Web Developer";
 		<li><a href="10_survey_widget/"> 10_survey_widget</a></li>
 	</ul>
 </div>
-
-<?php include(ROOT_PATH . 'inc/footer.php'); ?>
-
-

@@ -1,15 +1,4 @@
-<?php
-require_once("../../../inc/config.php");
-$section = "index";
-$pageTitle = "Ethan Neff | Bay Area iOS and Web Developer";
-?>
-
-<?php include(ROOT_PATH . 'inc/header.php'); ?>
-
-<div class="sub-index">
-  <ul>
-    <li><a href="../"> &lt;-- navigate_back</a></li>
-  </ul>
+<div>
   <h2>Sass Foundation</h2>
   <ul>
     <li><a href="01_nested_selectors/"> 01_nested_selectors</a></li>
@@ -29,6 +18,3 @@ $pageTitle = "Ethan Neff | Bay Area iOS and Web Developer";
     <li><a href="15_mixins_arguments/"> 15_mixins_arguments</a></li>
   </ul>
 </div>
-
-<?php include(ROOT_PATH . 'inc/footer.php'); ?>
-

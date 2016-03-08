@@ -2,4 +2,4 @@
 
 $errorCode = "401";
 $errorDesc = "Unauthorized";
-include_once("template.php");
+include_once("../template.php");

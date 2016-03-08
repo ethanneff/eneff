@@ -2,4 +2,4 @@
 
 $errorCode = "404";
 $errorDesc = "Not Found";
-include_once("template.php");
+include_once("../template.php");

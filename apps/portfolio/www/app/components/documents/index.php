@@ -225,6 +225,10 @@ include_once(dirname(dirname(dirname(__FILE__))) . "/shared/inc/config.php");
             <h3>How Great Leaders Inspire Action - Simon Sinek</h3>
             <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT-pRiHdELBOxLy2JZMOpwrQeuHh7nUN97k">here</a> to view the document.</div>
           </div>
+          <div class='nested-accordion'>
+            <h3>How To Multiply Your Time - Rory Vaden</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT9GlBJ2p6ZMgZezXlOLWpCBtTWg3WMTh1g">here</a> to view the document.</div>
+          </div>
         </div>
       </div>
       <div class='nested-accordion'>

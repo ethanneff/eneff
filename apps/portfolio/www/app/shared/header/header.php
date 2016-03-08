@@ -25,7 +25,7 @@ include(dirname(dirname(__FILE__)) . "/inc/config.php");
   <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
   <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
   <!-- Incompatibility Redirects (12.8%)-->
-  <!--[if lte IE 8]><script type="text/javascript">location.assign('<?php echo BASE_URL; ?>error/incompatibility.html');</script><![endif]-->
+  <!--[if lte IE 8]><script type="text/javascript">location.assign('<?php echo BASE_URL; ?>app/shared/errors/incompatibility/');</script><![endif]-->
 </head>
 <body>
   <div class="container">

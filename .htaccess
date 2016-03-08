@@ -23,11 +23,11 @@ RewriteCond %{REQUEST_URI}  !\.(php|html?|jpg|gif|css|js|png|eot|svg|ttf|woff|wo
 RewriteRule ^(.*)([^/])$ http://%{HTTP_HOST}/$1$2/ [L,R=301]
 
 # custom error pages
-ErrorDocument 400 /apps/portfolio/www/app/shared/errors/400.php
-ErrorDocument 401 /apps/portfolio/www/app/shared/errors/401.php
-ErrorDocument 403 /apps/portfolio/www/app/shared/errors/403.php
-ErrorDocument 404 /apps/portfolio/www/app/shared/errors/404.php
-ErrorDocument 500 /apps/portfolio/www/app/shared/errors/500.php
+ErrorDocument 400 /apps/portfolio/www/app/shared/errors/400/
+ErrorDocument 401 /apps/portfolio/www/app/shared/errors/401/
+ErrorDocument 403 /apps/portfolio/www/app/shared/errors/403/
+ErrorDocument 404 /apps/portfolio/www/app/shared/errors/404/
+ErrorDocument 500 /apps/portfolio/www/app/shared/errors/500/
 
 # redirect
 RewriteRule ^improve/$ apps/improve/www/index.php

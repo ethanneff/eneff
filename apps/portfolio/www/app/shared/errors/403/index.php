@@ -2,4 +2,4 @@
 
 $errorCode = "403";
 $errorDesc = "Forbidden";
-include_once("template.php");
+include_once("../template.php");

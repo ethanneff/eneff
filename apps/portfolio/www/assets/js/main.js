@@ -245,7 +245,7 @@
   })();
 
   var logger = (function(blah) {
-    var prod = false
+    var prod = true
     function log(msg) {
       if (!prod) console.log(msg);
     }

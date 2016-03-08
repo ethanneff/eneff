@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-401
-</body>
-</html>
+<?php
+
+$errorCode = "401";
+$errorDesc = "Unauthorized";
+include_once("template.php");

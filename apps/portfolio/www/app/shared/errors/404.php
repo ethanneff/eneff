@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-404
-</body>
-</html>
+<?php
+
+$errorCode = "404";
+$errorDesc = "Not Found";
+include_once("template.php");

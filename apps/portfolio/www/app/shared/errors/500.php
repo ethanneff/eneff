@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-500
-</body>
-</html>
+<?php
+
+$errorCode = "500";
+$errorDesc = "Internal Server Error";
+include_once("template.php");

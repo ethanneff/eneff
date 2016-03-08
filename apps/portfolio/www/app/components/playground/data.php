@@ -187,6 +187,42 @@ $data = array(
     ],
     ),
   array(
+    'title' => 'Swift Foundation',
+    'image' => 'ios_swift_foundation.png',
+    'modal' => 'ios_swift_foundation',
+    'tags' => ['Mobile', 'Training', 'Swift'],
+    'created' => '2014.09.26',
+    'updated' => '2014.09.26',
+    'paragraphs' => [
+    'The core basics of Swift.',
+    'Features variables, operators, loops, arrays, dictionaries, functions, enums, structs, and classes.',
+    ],
+    ),
+  array(
+    'title' => 'Swift Basics',
+    'image' => 'ios_swift_basics.png',
+    'modal' => 'ios_swift_basics',
+    'tags' => ['Mobile', 'Training', 'Swift'],
+    'created' => '2016.01.27',
+    'updated' => '2016.01.27',
+    'paragraphs' => [
+    'Features variables, operators, loops, arrays, dictionaries, functions, enums, structs, and classes, delegates, closures, optionals.',
+    'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Fundamentals">here</a>.',
+    ],
+    ),
+  array(
+    'title' => 'iOS Design Patterns',
+    'image' => 'ios_design_patterns.png',
+    'modal' => 'ios_design_patterns',
+    'tags' => ['Mobile', 'Training', 'Swift'],
+    'created' => '2016.02.10',
+    'updated' => '2016.02.10',
+    'paragraphs' => [
+    'Demonstrates each iOS design pattern including Singleton, 2 stage objection creation, KVC, KVO, Notifications, MVC.',
+    'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-ObjC-Design-Pattern-Examples">here</a>.',
+    ],
+    ),
+  array(
     'title' => 'Crystal Ball App',
     'image' => 'ios_crystal_ball.jpg',
     'modal' => 'ios_crystal_ball',
@@ -262,18 +298,6 @@ $data = array(
     'Galaga-like sprite-kit game where you play as a space cat shooting at space dogs.',
     'Features background music, sounds, nodes, sprites, randomization, and hardening difficulty.',
     'A demo of the app can be found <a title="link" href="//youtu.be/Mo_wKfrP_eY">here</a>.',
-    ],
-    ),
-  array(
-    'title' => 'Swift Foundation',
-    'image' => 'ios_swift_foundation.png',
-    'modal' => 'ios_swift_foundation',
-    'tags' => ['Mobile', 'Training', 'Swift'],
-    'created' => '2014.09.26',
-    'updated' => '2014.09.26',
-    'paragraphs' => [
-    'The core basics of Swift.',
-    'Features variables, operators, loops, arrays, dictionaries, functions, enums, structs, and classes.',
     ],
     ),
   array(
@@ -371,6 +395,20 @@ $data = array(
     'paragraphs' => [
     'A dynamic vertical-nested text accordion.',
     'The source code and be found <a title="link" href="//codepen.io/ethanneff/pen/ZYEKgd">here</a>.',
+    ],
+    ),
+  array(
+    'title' => 'Python Pather Script',
+    'image' => 'python_pather.png',
+    'modal' => 'python_pather',
+    'tags' => ['Back-end', 'Training', 'Python'],
+    'created' => '2014.11.22',
+    'updated' => '2014.11.22',
+    'paragraphs' => [
+    'Python Script which takes an input text file \'input.txt\' which contains a rectangular block of dot characters (\'.\') and two or more hash characters (\'#\').',
+    'Returns an output text file \'output.txt\' with the same data and has the two \'#\' characters joined by asterisks (\'*\').',
+    'Run the script via \'python pather.py input.txt output.txt\'.',
+    'The source code and be found <a title="link" href="//pythonfiddle.com/pather-script">here</a>.',
     ],
     ),
   array(

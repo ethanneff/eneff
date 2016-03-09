@@ -375,6 +375,18 @@ $data = array(
     ],
     ),
   array(
+    'title' => 'Pre-Loading Page',
+    'image' => 'css_loading_page.png',
+    'modal' => 'css_loading_page',
+    'tags' => ['Front-end', 'Module', 'CSS'],
+    'created' => '2014.11.11',
+    'updated' => '2014.11.15',
+    'paragraphs' => [
+    'A loading page for your website which can be triggered on and off with jQuery.',
+    'The source code and be found <a title="link" href="//codepen.io/ethanneff/pen/aNNKzR">here</a>.',
+    ],
+    ),
+  array(
     'title' => 'Fluid Accordion Image Slider',
     'image' => 'css_accordion_image_slider.jpg',
     'modal' => 'css_image_slider',

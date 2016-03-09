@@ -184,6 +184,7 @@ $data = array(
     'updated' => '2014.05.20',
     'paragraphs' => [
     'The basics of Objective-C.',
+    'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-ObjC-Fundamentals">here</a>.',
     ],
     ),
   array(

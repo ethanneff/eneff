@@ -37,10 +37,10 @@ $data = array(
     'modal' => 'ios_tableview_swipe',
     'tags' => ['Mobile', 'Module', 'Swift'],
     'created' => '2016.01.29',
-    'updated' => '2014.02.03',
+    'updated' => '2014.03.14',
     'paragraphs' => [
     'Able to swipe the TableView cell to do an action. Direction and length of the swipe can do different actions.',
-    'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Swipe-Table-View-Cells">here</a>.',
+    'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Swipe-TableView-Cell-2">here</a>.',
     ],
     ),
   array(
@@ -336,6 +336,20 @@ $data = array(
     'Uses GeoLocation to get the current location of the user to pull data from forecast.io.',
     'Leverages the TableView - DisplayView model to view the weekly and daily weather forecast.',
     'A demo of the app can be found <a title="link" href="//youtu.be/hZWQUUMjBUY">here</a>.',
+    ],
+    ),
+  array(
+    'title' => 'Vending Machine App',
+    'image' => 'ios_vending_machine.png',
+    'modal' => 'ios_vending_machine',
+    'tags' => ['Mobile', 'Training', 'Swift'],
+    'created' => '2016.03.14',
+    'updated' => '2016.03.15',
+    'paragraphs' => [
+    'Simple app which replicated a vending machine.',
+    'It takes user inputs to do processing on a scalable data model.',
+    'Features stack views, collection views, MVC standards, error handling, and plist data model.',
+    'A demo of the app can be found <a title="link" href="//youtu.be/zIiOcp3cLfQ">here</a>.',
     ],
     ),
   array(

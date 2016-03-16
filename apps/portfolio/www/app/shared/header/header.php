@@ -6,8 +6,8 @@ include(dirname(dirname(__FILE__)) . "/inc/config.php");
 <head>
   <!-- Data -->
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Descriptions -->
   <title>Ethan Neff | Bay Area | iOS and Full Stack Developer</title>
   <meta name="description" content="Portfolio website of Ethan Neff showcasing the various iOS and Full Stack side projects.">

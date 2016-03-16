@@ -310,7 +310,7 @@ $data = array(
     'updated' => '2014.10.05',
     'paragraphs' => [
     'Simple single view app which generates a new quote based on a button press.',
-    'A demo of the app can be found <a title="link" href="//youtu.be/l6LjpsdEGuQ">here</a>.',
+    'A demo of the app can be found <a title="link" href="//youtu.be/bYmEtlwFf9g>here</a>.',
     ],
     ),
   array(
@@ -335,7 +335,7 @@ $data = array(
     'paragraphs' => [
     'Uses GeoLocation to get the current location of the user to pull data from forecast.io.',
     'Leverages the TableView - DisplayView model to view the weekly and daily weather forecast.',
-    'A demo of the app can be found <a title="link" href="//youtu.be/hZWQUUMjBUY">here</a>.',
+    'A demo of the app can be found <a title="link" href="//youtu.be/nMQOB-zNnrA">here</a>.',
     ],
     ),
   array(
@@ -349,7 +349,7 @@ $data = array(
     'Simple app which replicated a vending machine.',
     'It takes user inputs to do processing on a scalable data model.',
     'Features stack views, collection views, MVC standards, error handling, and plist data model.',
-    'A demo of the app can be found <a title="link" href="//youtu.be/y0aeZRif_1E">here</a>.',
+    'A demo of the app can be found <a title="link" href="//youtu.be/RFXOltnrTv0">here</a>.',
     ],
     ),
   array(

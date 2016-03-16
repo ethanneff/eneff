@@ -349,7 +349,7 @@ $data = array(
     'Simple app which replicated a vending machine.',
     'It takes user inputs to do processing on a scalable data model.',
     'Features stack views, collection views, MVC standards, error handling, and plist data model.',
-    'A demo of the app can be found <a title="link" href="//youtu.be/zIiOcp3cLfQ">here</a>.',
+    'A demo of the app can be found <a title="link" href="//youtu.be/y0aeZRif_1E">here</a>.',
     ],
     ),
   array(

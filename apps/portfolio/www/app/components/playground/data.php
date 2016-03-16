@@ -310,7 +310,7 @@ $data = array(
     'updated' => '2014.10.05',
     'paragraphs' => [
     'Simple single view app which generates a new quote based on a button press.',
-    'A demo of the app can be found <a title="link" href="//youtu.be/bYmEtlwFf9g>here</a>.',
+    'A demo of the app can be found <a title="link" href="//youtu.be/bYmEtlwFf9g">here</a>.',
     ],
     ),
   array(

@@ -259,6 +259,11 @@ include_once(dirname(dirname(dirname(__FILE__))) . "/shared/inc/config.php");
             <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT_RVMISXgxE8rdxzH7aMTzmuOSMKtX8h4g">here</a> to view the document.</div>
           </div>
           <div class='nested-accordion'>
+            <h3>Soft Skills - Team Treehouse</h3>
+            <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT9LqUeVzQpF-K-zAjZ0ZCzh_HFOmZ4m8jY">here</a> to view the document.</div>
+          </div>
+
+          <div class='nested-accordion'>
             <h3>Measuring Performance - Team Treehouse</h3>
             <div class='comment'>Click <a target="_blank" href="//www.evernote.com/l/AT-lFHq81HBAio7GfH2gTgFOhnQlbgQV70s">here</a> to view the document.</div>
           </div>

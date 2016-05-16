@@ -6,6 +6,31 @@ $base_app = $base_url . 'app/components/playground/apps/';
 
 $data = array(
   array(
+    'title' => 'Organize App',
+    'image' => 'ios_organize.png',
+    'modal' => 'ios_organize',
+    'tags' => ['Mobile', 'Project', 'Swift'],
+    'created' => '2016.02.15',
+    'updated' => '2016.05.15',
+    'paragraphs' => [
+    'An app to organize your thoughts and notes.',
+    'Has custom swipe gestures to complete, indent, reorder, edit, and set reminders for your notes.',
+    'A demo of the app can be found <a href="//youtu.be/xgEHHqGtfXU" title="link to YouTube demo of app">here</a>.',
+    ],
+    ),
+  array(
+    'title' => 'Improve App',
+    'image' => 'ios_improve.png',
+    'modal' => 'ios_improve',
+    'tags' => ['Mobile', 'Project', 'Swift'],
+    'created' => '2016.05.15',
+    'updated' => '2016.05.15',
+    'paragraphs' => [
+    'An app to track your habits and goals to make steady improvements every day.',
+    'Has custom swipe gestures to complete, indent, reorder, edit, and set reminders for your habits and goals.',
+    ],
+    ),
+  array(
     'title' => 'Thought Tracker App',
     'image' => 'ios_thought_tracker.jpg',
     'modal' => 'ios_thought_tracker',

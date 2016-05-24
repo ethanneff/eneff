@@ -57,6 +57,21 @@ $data = array(
     ],
     ),
   array(
+    'title' => 'BetterHelp App',
+    'image' => 'ios_betterhelp.png',
+    'modal' => 'ios_betterhelp',
+    'tags' => ['Mobile', 'Project', 'Hybrid', 'JavaScript', 'AngularJS'],
+    'created' => '2015.03.05',
+    'updated' => '2015.12.15',
+    'paragraphs' => [
+    'An Ionic Hybrid app which works both on iOS and Android.',
+    'The app allows users to sign up and message their counselors with their devices.',
+    '24% of clients where using the app to message their counselor. This app also opened a new revenue stream with app ad targeting.',
+    'Features multiple orientations, push notifications, remote config, user tracking, off-line storage, deep links, real-time message sync, user authentication, and crash reporting.',
+    'A demo of the app can be found <a title="video link to the workout interval app" href="//youtu.be/CI2s4d6pT9I">here</a>.',
+    ],
+    ),
+  array(
     'title' => 'Crystal Ball App',
     'image' => 'ios_crystal_ball.jpg',
     'modal' => 'ios_crystal_ball',

@@ -210,6 +210,18 @@ $data = array(
     ],
     ),
   array(
+    'title' => 'FriendlyChat App',
+    'image' => 'ios_friendlychat.png',
+    'modal' => 'ios_friendlychat',
+    'tags' => ['Mobile', 'Training', 'Swift'],
+    'created' => '2016.05.23',
+    'updated' => '2016.05.24',
+    'paragraphs' => [
+    'A <a title="link" href="//www.firebase.com/">Firebase</a> app which demonstrates login, signup, forgot password, file upload, ads, crash analytics, tracking analytics, and live realtime data sync.',
+    'The source code of the app can be found <a title="link" href="//github.com/ethanneff/FriendlyChat">here</a>.',
+    ],
+    ),
+  array(
     'title' => 'Swipe TableViewCell',
     'image' => 'ios_tableview_swipe.png',
     'modal' => 'ios_tableview_swipe',

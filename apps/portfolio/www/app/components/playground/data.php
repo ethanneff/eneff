@@ -68,7 +68,7 @@ $data = array(
     'The app allows users to sign up and message their counselors with their devices.',
     '24% of clients where using the app to message their counselor. This app also opened a new revenue stream with app ad targeting.',
     'Features multiple orientations, push notifications, remote config, user tracking, off-line storage, deep links, real-time message sync, user authentication, and crash reporting.',
-    'A demo of the app can be found <a title="video link to the workout interval app" href="//youtu.be/CI2s4d6pT9I">here</a>.',
+    'A demo of the app can be found <a title="video link to the workout interval app" href="//youtu.be/R5OJ9isDKJs">here</a>.',
     ],
     ),
   array(
@@ -233,7 +233,7 @@ $data = array(
     'updated' => '2016.04.22',
     'paragraphs' => [
     'A basic navigation app which features keyboard notifications, audio system sounds, anchor constraints, MVC design, and protocol composition.',
-    'A demo of the app can be found <a title="link" href="//youtu.be/9X_h3Y7W-60">here</a>.',
+    'A demo of the app can be found <a title="link" href="//youtu.be/dy62PzrpLTk">here</a>.',
     ],
     ),
   array(

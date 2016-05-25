@@ -225,6 +225,18 @@ $data = array(
     ],
     ),
   array(
+    'title' => 'Interactive Story App',
+    'image' => 'ios_interactive_story.png',
+    'modal' => 'ios_interactive_story',
+    'tags' => ['Mobile', 'Training', 'Swift'],
+    'created' => '2016.04.22',
+    'updated' => '2016.04.22',
+    'paragraphs' => [
+    'A basic navigation app which features keyboard notifications, audio system sounds, anchor constraints, MVC design, and protocol composition.',
+    'A demo of the app can be found <a title="link" href="//youtu.be/9X_h3Y7W-60">here</a>.',
+    ],
+    ),
+  array(
     'title' => 'FriendlyChat App',
     'image' => 'ios_friendlychat.png',
     'modal' => 'ios_friendlychat',
@@ -414,6 +426,18 @@ $data = array(
     'paragraphs' => [
     'Features variables, operators, loops, arrays, dictionaries, functions, enums, structs, and classes, delegates, closures, optionals.',
     'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Fundamentals">here</a>.',
+    ],
+    ),
+  array(
+    'title' => 'Swift Intermediate',
+    'image' => 'ios_swift_intermediate.png',
+    'modal' => 'ios_swift_intermediate',
+    'tags' => ['Mobile', 'Training', 'Swift'],
+    'created' => '2016.04.21',
+    'updated' => '2016.04.21',
+    'paragraphs' => [
+    'Features properties, initializers, value type inheritance, extensions, protocols, memory management, generics, protocol orientation programming, and closures.',
+    'The source code of the app can be found <a title="link" href="//github.com/ethanneff/SwiftIntermediate">here</a>.',
     ],
     ),
   array(

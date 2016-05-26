@@ -254,10 +254,22 @@ $data = array(
     'modal' => 'ios_tableview_swipe',
     'tags' => ['Mobile', 'Module', 'Swift'],
     'created' => '2016.01.29',
-    'updated' => '2014.03.14',
+    'updated' => '2016.03.14',
     'paragraphs' => [
     'Able to swipe the TableView cell to do an action. Direction and length of the swipe can do different actions.',
     'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Swipe-TableView-Cell-2">here</a>.',
+    ],
+    ),
+  array(
+    'title' => 'Keyboard ScrollView',
+    'image' => 'ios_keyboard_scrollview.png',
+    'modal' => 'ios_keyboard_scrollview',
+    'tags' => ['Mobile', 'Module', 'Swift'],
+    'created' => '2016.05.26',
+    'updated' => '2016.05.26',
+    'paragraphs' => [
+    'A no storyboard example to handle the keyboard interface with a UIScrollView (ios 8.0+).',
+    'The source code of the app can be found <a title="link" href="//github.com/ethanneff/KeyboardScrollView">here</a>.',
     ],
     ),
   array(
@@ -266,7 +278,7 @@ $data = array(
     'modal' => 'ios_login_template',
     'tags' => ['Mobile', 'Module', 'Swift'],
     'created' => '2016.01.29',
-    'updated' => '2014.02.03',
+    'updated' => '2016.02.03',
     'paragraphs' => [
     'A simple template login template to easily work off of.',
     'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Login">here</a>.',
@@ -278,7 +290,7 @@ $data = array(
     'modal' => 'ios_segmented_animated_tableviews',
     'tags' => ['Mobile', 'Module', 'Swift'],
     'created' => '2016.01.29',
-    'updated' => '2014.02.03',
+    'updated' => '2016.02.03',
     'paragraphs' => [
     'A template for the segmented control with an animated slide between controllers via a segmented control.',
     'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Segmented-Animated-TableViews">here</a>.',
@@ -290,7 +302,7 @@ $data = array(
     'modal' => 'ios_modular_design_with_storyboards',
     'tags' => ['Mobile', 'Module', 'Swift'],
     'created' => '2016.01.29',
-    'updated' => '2014.02.03',
+    'updated' => '2016.02.03',
     'paragraphs' => [
     'Makes developing easier with modular design with each Controller will have their own Storyboard (View).',
     'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Modular-Design-With-Multiple-Storyboards">here</a>.',
@@ -302,7 +314,7 @@ $data = array(
     'modal' => 'ios_status_bar_notifications',
     'tags' => ['Mobile', 'Module', 'Swift'],
     'created' => '2016.01.29',
-    'updated' => '2014.02.03',
+    'updated' => '2016.02.03',
     'paragraphs' => [
     'A notification alert within the status bar area that persists through multiple ViewControllers.',
     'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Status-Bar-Notifications">here</a>.',
@@ -314,7 +326,7 @@ $data = array(
     'modal' => 'ios_persist_nscoder',
     'tags' => ['Mobile', 'Module', 'Swift'],
     'created' => '2016.02.24',
-    'updated' => '2014.02.25',
+    'updated' => '2016.02.25',
     'paragraphs' => [
     'Persist data on the device to  save and retrieve data whenever the app closes and whenever the app\'s memory is garbage collected.',
     'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Persist-Data-NSCoder">here</a>.',
@@ -326,7 +338,7 @@ $data = array(
     'modal' => 'ios_reorder_tabelviewcells_apple',
     'tags' => ['Mobile', 'Module', 'Swift'],
     'created' => '2016.02.03',
-    'updated' => '2014.02.20',
+    'updated' => '2016.02.20',
     'paragraphs' => [
     'Reorder the TableViewCells with a drag and drop animation. This is the Apple implementation which is limited in functionality.',
     'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Drag-And-Drop-TableView-Cell-2">here</a>.',
@@ -338,7 +350,7 @@ $data = array(
     'modal' => 'ios_reorder_tabelviewcells_custom',
     'tags' => ['Mobile', 'Module', 'Swift'],
     'created' => '2016.02.29',
-    'updated' => '2014.02.29',
+    'updated' => '2016.02.29',
     'paragraphs' => [
     'Reorder the TableViewCells with a drag and drop animation. Allows before and after listeners to modify the data.',
     'The source code of the app can be found <a title="link" href="//github.com/ethanneff/iOS-Swift-Drag-And-Drop-TableView-Cell-4">here</a>.',

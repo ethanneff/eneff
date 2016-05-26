@@ -34,6 +34,7 @@ RewriteRule ^improve/$ apps/improve/www/index.php
 RewriteRule ^complete/$ apps/complete/www/index.php
 RewriteRule ^strengthen/$ apps/strengthen/www/index.php
 RewriteRule ^portfolio/$ apps/portfolio/www/index.php
+RewriteRule ^organize/$ apps/organize/www/index.php
 # ETODO: remove
 RewriteRule ^test/$ apps/test/www/index.php
 RewriteRule ^test/playground/$ apps/test/www/index.php

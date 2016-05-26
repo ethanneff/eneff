@@ -4,8 +4,8 @@ class Database {
   private static $host = "localhost";
   private static $name = "enefjzpu_improve";
   private static $port = "3306";
-  private static $user = "root";
-  private static $pass = "root";
+  private static $user = "enefjzpu_eneff";
+  private static $pass = "y_O15iGsYpw4i";
   private static $retrys = 3;
   private static $wait = 250000;
   private static $db;

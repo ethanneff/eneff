@@ -30,7 +30,7 @@ class Database {
     if (self::$db) {
       return self::$db;
     } else {
-      return "error_database";
+      Api::error(500, 1, "missing database connection");
     }
   }
 

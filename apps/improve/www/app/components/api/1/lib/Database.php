@@ -15,6 +15,9 @@ class Database {
       $retry = self::$retrys;
       while ($retry) {
         try {
+          // TODO: handle $user and $pass better based on env
+          self::$user = ($_SERVER["SERVER_ADDR"] == "::1" || $_SERVER["SERVER_ADDR"] == "127.0.0.1" ) ? "root" : "enefjzpu_eneff";
+          self::$pass = ($_SERVER["SERVER_ADDR"] == "::1" || $_SERVER["SERVER_ADDR"] == "127.0.0.1" ) ? "root" : "y_O15iGsYpw4i";
           self::$db = new PDO("mysql:host=" . self::$host . ";dbname=" . self::$name .";port=" . self::$port, self::$user, self::$pass);
           self::$db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
           self::$db->exec("SET NAMES 'utf8'");

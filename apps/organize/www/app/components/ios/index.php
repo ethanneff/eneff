@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Organize App Landing Page</title>
+  <!-- redirect -->
+  <meta http-equiv="refresh" content="0; URL='https://itunes.apple.com/app/?id=1116178818'" />
   <style type="text/css" media="screen">
   * { padding: 0; margin: 0; background-color: #FAFAFA; box-sizing: border-box; }
   a { color: #3498db; text-decoration: none;}

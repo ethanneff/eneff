@@ -10,7 +10,7 @@
   </style>
 </head>
 <body>
-  <p>the landing page if trying to access a <a href="https://yp4ut.app.goo.gl/I2ST" title="dynamiclink">deep link</a> on a computer</p>
-  <p>the page will redirect to the App or iTunes Store if on an iOS device</p>
+  <p>the landing page if trying to access a deep link on a computer</p>
+  <p>the page will redirect to the <a href="https://yp4ut.app.goo.gl/I2ST" title="deep link">App</a> or <a href="https://itunes.apple.com/app/?id=1116178818" title="iTunes Store">iTunes Store</a> if on an iOS device</p>
 </body>
 </html>

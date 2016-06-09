@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Organize App Landing Page</title>
+  <title>Organize App</title>
+  <link rel="shortcut icon" href="/apps/portfolio/www/assets/img/icon/favicon.ico">
   <style type="text/css" media="screen">
   * { padding: 0; margin: 0; background-color: #FAFAFA; box-sizing: border-box; }
   a { color: #3498db; text-decoration: none;}

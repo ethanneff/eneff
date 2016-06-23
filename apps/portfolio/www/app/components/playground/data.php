@@ -15,7 +15,7 @@ $data = array(
     'paragraphs' => [
     'An app to organize your thoughts and notes.',
     'Has custom swipe gestures to complete, collapse, indent, reorder, edit, and set reminders for your notes.',
-    'A demo of the app can be found <a href="//youtu.be/xgEHHqGtfXU" title="link to YouTube demo of app">here</a>.',
+    'A demo of the app can be found <a href="//youtu.be/rFodGwQci3U" title="link to YouTube demo of app">here</a>.',
     'You can find the app on the iTunes App Store <a href="//itunes.apple.com/app/?id=1116178818" title="link to the App on the iTunes App Store">here</a>.',
     ],
     ),

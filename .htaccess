@@ -34,11 +34,14 @@ RewriteRule ^improve/$ apps/improve/www/index.php
 RewriteRule ^complete/$ apps/complete/www/index.php
 RewriteRule ^strengthen/$ apps/strengthen/www/index.php
 RewriteRule ^portfolio/$ apps/portfolio/www/index.php
+RewriteRule ^resume/$ apps/portfolio/www/assets/img/about/ethan_neff_resume_graphic.png
 RewriteRule ^organize/$ apps/organize/www/index.php
 RewriteRule ^organize/ios/$ apps/organize/www/app/components/ios/index.php
 # ETODO: remove
 RewriteRule ^test/$ apps/test/www/index.php
 RewriteRule ^test/playground/$ apps/test/www/index.php
+
+
 
 # improve api
 RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$2.php

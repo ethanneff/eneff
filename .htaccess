@@ -22,35 +22,35 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{REQUEST_URI} !\.(php|html?|jpg|gif|css|js|png|eot|svg|ttf|woff|woff2|json|md|hbs|pdf)$
 RewriteRule ^(.*)([^/])$ http://%{HTTP_HOST}/$1$2/ [L,R=301]
 
-# # custom error pages
-# ErrorDocument 400 /apps/portfolio/www/app/shared/errors/400/
-# ErrorDocument 401 /apps/portfolio/www/app/shared/errors/401/
-# ErrorDocument 403 /apps/portfolio/www/app/shared/errors/403/
-# ErrorDocument 404 /apps/portfolio/www/app/shared/errors/404/
-# ErrorDocument 500 /apps/portfolio/www/app/shared/errors/500/
+# custom error pages
+ErrorDocument 400 /apps/portfolio/www/app/shared/errors/400/
+ErrorDocument 401 /apps/portfolio/www/app/shared/errors/401/
+ErrorDocument 403 /apps/portfolio/www/app/shared/errors/403/
+ErrorDocument 404 /apps/portfolio/www/app/shared/errors/404/
+ErrorDocument 500 /apps/portfolio/www/app/shared/errors/500/
 
-# # redirect
-# RewriteRule ^improve/$ apps/improve/www/index.php
-# RewriteRule ^complete/$ apps/complete/www/index.php
-# RewriteRule ^strengthen/$ apps/strengthen/www/index.php
-# RewriteRule ^portfolio/$ apps/portfolio/www/index.php
-# RewriteRule ^resume/$ apps/portfolio/www/assets/img/about/ethan_neff_resume_graphic.png
-# RewriteRule ^organize/$ apps/organize/www/index.php
-# RewriteRule ^organize/ios/$ apps/organize/www/app/components/ios/index.php
-# # ETODO: remove
-# RewriteRule ^test/$ apps/test/www/index.php
-# RewriteRule ^test/playground/$ apps/test/www/index.php
+# redirect
+RewriteRule ^improve/$ apps/improve/www/index.php
+RewriteRule ^complete/$ apps/complete/www/index.php
+RewriteRule ^strengthen/$ apps/strengthen/www/index.php
+RewriteRule ^portfolio/$ apps/portfolio/www/index.php
+RewriteRule ^resume/$ apps/portfolio/www/assets/img/about/ethan_neff_resume_graphic.png
+RewriteRule ^organize/$ apps/organize/www/index.php
+RewriteRule ^organize/ios/$ apps/organize/www/app/components/ios/index.php
+# ETODO: remove
+RewriteRule ^test/$ apps/test/www/index.php
+RewriteRule ^test/playground/$ apps/test/www/index.php
 
-# # improve api
-# RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$2.php
-# RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$3/$3.php
-# RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/$ /apps/improve/www/app/components/api/$1/$2/$2.php?id=$3
-# RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$4.php
-# RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$4.php?id=$5
-# RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$6/$6.php
-# RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$6/$6.php?id=$7
-# RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$6/$8/$8.php
-# RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$6/$8/$8.php?id=$9
+# improve api
+RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$2.php
+RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$3/$3.php
+RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/$ /apps/improve/www/app/components/api/$1/$2/$2.php?id=$3
+RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$4.php
+RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$4.php?id=$5
+RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$6/$6.php
+RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$6/$6.php?id=$7
+RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$6/$8/$8.php
+RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/([a-zA-z]+)/([0-9]+)/$ /apps/improve/www/app/components/api/$1/$2/$4/$6/$8/$8.php?id=$9
 
 
 ###################

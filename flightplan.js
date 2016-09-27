@@ -1,6 +1,4 @@
-// run 'git commit -am'' ' command
-// run 'fly prod' to sync to production
-
+// 'fly prod'
 var plan = require('flightplan');
 
 // configuration

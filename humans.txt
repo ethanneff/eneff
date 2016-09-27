@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Ethan Neff -- Developer -- @ethanneff
 
 # THANKS
 
-    <name>
+    Ethan Neff
 
 # TECHNOLOGY COLOPHON
 

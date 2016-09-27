@@ -39,3 +39,4 @@ Thumbs.db
 # custom #
 ######################
 .sass-cache
+node_modules

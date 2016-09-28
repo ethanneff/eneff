@@ -10,3 +10,9 @@ git commit -am "";
 npm install flightplan --save-dev;
 fly prod;
 ```
+
+```
+MAILTO="ethan.neff@eneff.com"
+SHELL="/bin/bash"
+# 0 0 * * * php /home/enefjzpu/www/apps/portfolio/assets/cron/updateGoogleAnalytics.php
+```

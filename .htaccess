@@ -42,7 +42,7 @@ RewriteRule ^test2/$ apps/test2/www/index.php
 
 # subdomain
 RewriteCond %{HTTP_HOST} ^(.*)\.eneff\.io
-RewriteRule ^(.*)$ http://eneff.io/apps/%1/$1 [L,NC,QSA]
+RewriteRule ^(.*)$ http://eneff.io/apps/www/%1/$1 [L,NC,QSA]
 
 # improve api
 RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$2.php

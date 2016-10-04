@@ -4,38 +4,44 @@
 
 # # rewrites
 RewriteEngine on
-# RewriteBase /
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^m\.daltonempire\.nl$ [NC]
+RewriteCond %{REQUEST_URI} !^/m(/|$) [NC]
+RewriteCond %{REQUEST_FILENAME} !-d # not a dir
+RewriteCond %{REQUEST_FILENAME} !-f # not a file
+RewriteRule ^(.*)$ m/$1 [L]
 
 # remove www from host
 # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 # RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,QSA,NC,L]
 
 # subdomain
-RewriteCond %{HTTP_HOST} ^organize\.mydomain\.com$
-RewriteCond %{REQUEST_URI} !^/apps/organize/www/
-RewriteRule (.*) /apps/organize/www/$1
+# RewriteCond %{HTTP_HOST} ^organize\.mydomain\.com$
+# RewriteCond %{REQUEST_URI} !^/apps/organize/www/
+# RewriteRule (.*) /apps/organize/www/$1
 
 # RewriteCond %{HTTP_HOST} ^(.*)\.eneff\.io
 # RewriteRule ^(.*)$ http://eneff.io/apps/www/%1/$1 [L,NC,QSA]
 
 # force https
-RewriteCond %{HTTP_HOST} !=localhost
-RewriteCond %{HTTP_HOST} !=127.0.0.1
-RewriteCond %{REMOTE_ADDR} !=127.0.0.1
-RewriteCond %{REMOTE_ADDR} !=::1
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# RewriteCond %{HTTP_HOST} !=localhost
+# RewriteCond %{HTTP_HOST} !=127.0.0.1
+# RewriteCond %{REMOTE_ADDR} !=127.0.0.1
+# RewriteCond %{REMOTE_ADDR} !=::1
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # # force trailing slash
 # RewriteCond %{REQUEST_URI} !\.(php|html?|jpg|gif|css|js|png|eot|svg|ttf|woff|woff2|json|md|hbs|pdf)$
 # RewriteRule ^(.*)([^/])$ http://%{HTTP_HOST}/$1$2/ [L,R=301]
 
 # custom error pages
-ErrorDocument 400 /apps/portfolio/www/app/shared/errors/400/
-ErrorDocument 401 /apps/portfolio/www/app/shared/errors/401/
-ErrorDocument 403 /apps/portfolio/www/app/shared/errors/403/
-ErrorDocument 404 /apps/portfolio/www/app/shared/errors/404/
-ErrorDocument 500 /apps/portfolio/www/app/shared/errors/500/
+# ErrorDocument 400 /apps/portfolio/www/app/shared/errors/400/
+# ErrorDocument 401 /apps/portfolio/www/app/shared/errors/401/
+# ErrorDocument 403 /apps/portfolio/www/app/shared/errors/403/
+# ErrorDocument 404 /apps/portfolio/www/app/shared/errors/404/
+# ErrorDocument 500 /apps/portfolio/www/app/shared/errors/500/
 
 # # redirect
 # RewriteRule ^improve/$ apps/improve/www/index.php

@@ -6,7 +6,7 @@
 RewriteEngine on
 RewriteBase /
 
-RewriteCond %{HTTP_HOST} ^m\.daltonempire\.nl$ [NC]
+RewriteCond %{HTTP_HOST} ^m\.eneff\.io$ [NC]
 RewriteCond %{REQUEST_URI} !^/m(/|$) [NC]
 RewriteCond %{REQUEST_FILENAME} !-d # not a dir
 RewriteCond %{REQUEST_FILENAME} !-f # not a file

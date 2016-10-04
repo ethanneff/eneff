@@ -4,7 +4,7 @@
 
 # # rewrites
 RewriteEngine on
-RewriteBase /
+# RewriteBase /
 
 # remove www from host
 # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]

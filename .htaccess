@@ -15,8 +15,8 @@ RewriteCond %{HTTP_HOST} ^blog\.mydomain\.com$
 RewriteCond %{REQUEST_URI} !^/blog/
 RewriteRule (.*) /blog/$1
 
-RewriteCond %{HTTP_HOST} ^(.*)\.eneff\.io
-RewriteRule ^(.*)$ http://eneff.io/apps/www/%1/$1 [L,NC,QSA]
+# RewriteCond %{HTTP_HOST} ^(.*)\.eneff\.io
+# RewriteRule ^(.*)$ http://eneff.io/apps/www/%1/$1 [L,NC,QSA]
 
 # force https
 RewriteCond %{HTTP_HOST} !=localhost

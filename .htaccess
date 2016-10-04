@@ -10,6 +10,10 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,QSA,NC,L]
 
+# subdomain
+RewriteCond %{HTTP_HOST} ^(.*)\.eneff\.io
+RewriteRule ^(.*)$ http://eneff.io/apps/%1/$1 [L,NC,QSA]
+
 # force https
 RewriteCond %{HTTP_HOST} !=localhost
 RewriteCond %{HTTP_HOST} !=127.0.0.1
@@ -17,6 +21,7 @@ RewriteCond %{REMOTE_ADDR} !=127.0.0.1
 RewriteCond %{REMOTE_ADDR} !=::1
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 
 # force trailing slash
 RewriteCond %{REQUEST_URI} !\.(php|html?|jpg|gif|css|js|png|eot|svg|ttf|woff|woff2|json|md|hbs|pdf)$
@@ -40,9 +45,6 @@ RewriteRule ^organize/ios/$ apps/organize/www/app/components/ios/index.php
 RewriteRule ^test/$ apps/test/www/index.php
 RewriteRule ^test2/$ apps/test2/www/index.php
 
-# subdomain
-# RewriteCond %{HTTP_HOST} ^(.*)\.eneff\.io
-# RewriteRule ^(.*)$ https://eneff.io/apps/www/%1/$1 [L,NC,QSA]
 
 # improve api
 RewriteRule ^improve/api/([0-9]+)/([a-zA-z]+)/$ /apps/improve/www/app/components/api/$1/$2/$2.php

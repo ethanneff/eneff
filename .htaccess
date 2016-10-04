@@ -11,8 +11,12 @@ RewriteEngine on
 # RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,QSA,NC,L]
 
 # subdomain
+RewriteCond %{HTTP_HOST} ^blog\.mydomain\.com$
+RewriteCond %{REQUEST_URI} !^/blog/
+RewriteRule (.*) /blog/$1
+
 RewriteCond %{HTTP_HOST} ^(.*)\.eneff\.io
-RewriteRule ^(.*)$ http://eneff.io/apps/%1/$1 [L,NC,QSA]
+RewriteRule ^(.*)$ http://eneff.io/apps/www/%1/$1 [L,NC,QSA]
 
 # force https
 RewriteCond %{HTTP_HOST} !=localhost
